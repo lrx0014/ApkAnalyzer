@@ -1,0 +1,31 @@
+{
+  "activities": [
+    "com.jordansamhi.securitymobilecomputing.MainActivity1"
+  ],
+  "services": [],
+  "receivers": [],
+  "providers": [
+    "androidx.startup.InitializationProvider"
+  ],
+  "main_activity": "com.jordansamhi.securitymobilecomputing.MainActivity1",
+  "permissions": [
+    "com.jordansamhi.securitymobilecomputing.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "intent_filters": {
+    "activities": {
+      "com.jordansamhi.securitymobilecomputing.MainActivity1": {
+        "action": [
+          "android.intent.action.MAIN"
+        ],
+        "category": [
+          "android.intent.category.LAUNCHER"
+        ]
+      }
+    },
+    "services": {},
+    "receivers": {}
+  },
+  "native_libraries": [],
+  "dynamic_code_loading": [],
+  "dangerous_permissions": []
+}
