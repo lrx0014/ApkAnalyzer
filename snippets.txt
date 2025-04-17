@@ -1,4 +1,4 @@
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity1; -> <init> : NOT OBFUSCATED
+// MainActivity1.<init> : NOT-OBFUSCATED
 v1, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 v0, 5
 v0, v0, [B
@@ -14,7 +14,7 @@ b'1\x0c\x1e\x1c\x1d\x00' | \x31\x0c\x1e\x1c\x1d\x00
 
 b'0\x06\r\x08\x17\x16\x1f\x12\x18\x00' | \x30\x06\x0d\x08\x17\x16\x1f\x12\x18\x00
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity1; -> decrypt : NOT OBFUSCATED
+// MainActivity1.decrypt : NOT-OBFUSCATED
 v0, "LOG"
 v1, "decrypting"
 v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
@@ -41,12 +41,12 @@ v0, Ljava/nio/charset/StandardCharsets;->UTF_8 Ljava/nio/charset/Charset;
 v6, v1, v0, Ljava/lang/String;-><init>([B Ljava/nio/charset/Charset;)V
 v6
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity1; -> onCreate : NOT OBFUSCATED
+// MainActivity1.onCreate : NOT-OBFUSCATED
 v0, v1, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 v1, Lcom/jordansamhi/securitymobilecomputing/R$layout;->activity_main I
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/MainActivity1;->setContentView(I)V
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity1; -> onLoginClicked : OBFUSCATED
+// MainActivity1.onLoginClicked : NOT-OBFUSCATED
 v6, "button clicked"
 v0, "LOG"
 v0, v6, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
@@ -92,19 +92,19 @@ v6
 v6, Landroid/widget/Toast;->show()V
 v0, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity; -> <init> : NOT OBFUSCATED
+// MainActivity.<init> : NOT-OBFUSCATED
 v1, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 v0, "admin"
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/MainActivity;->USERNAME Ljava/lang/String;
 v0, "password123"
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/MainActivity;->PASSWORD Ljava/lang/String;
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity; -> onCreate : NOT OBFUSCATED
+// MainActivity.onCreate : NOT-OBFUSCATED
 v0, v1, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 v1, Lcom/jordansamhi/securitymobilecomputing/R$layout;->activity_main I
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/MainActivity;->setContentView(I)V
 
-// Lcom/jordansamhi/securitymobilecomputing/MainActivity; -> onLoginClicked : NOT OBFUSCATED
+// MainActivity.onLoginClicked : NOT-OBFUSCATED
 v3, Lcom/jordansamhi/securitymobilecomputing/R$id;->usernameField I
 v2, v3, Lcom/jordansamhi/securitymobilecomputing/MainActivity;->findViewById(I)Landroid/view/View;
 v3
@@ -140,49 +140,49 @@ v2, v3, v1, Landroid/widget/Toast;->makeText(Landroid/content/Context; Ljava/lan
 v3
 v3, Landroid/widget/Toast;->show()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$color; -> <init> : NOT OBFUSCATED
+// R$color.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$dimen; -> <init> : NOT OBFUSCATED
+// R$dimen.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$drawable; -> <init> : NOT OBFUSCATED
+// R$drawable.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$id; -> <init> : NOT OBFUSCATED
+// R$id.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$layout; -> <init> : NOT OBFUSCATED
+// R$layout.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$menu; -> <init> : NOT OBFUSCATED
+// R$menu.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$mipmap; -> <init> : NOT OBFUSCATED
+// R$mipmap.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$navigation; -> <init> : NOT OBFUSCATED
+// R$navigation.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$string; -> <init> : NOT OBFUSCATED
+// R$string.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$style; -> <init> : NOT OBFUSCATED
+// R$style.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R$xml; -> <init> : NOT OBFUSCATED
+// R$xml.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/R; -> <init> : NOT OBFUSCATED
+// R.<init> : MAY-BE-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> <init> : NOT OBFUSCATED
+// ActivityMain1Binding.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 v1, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->rootView Landroidx/constraintlayout/widget/ConstraintLayout;
 v2, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->passwordField Landroid/widget/EditText;
 v3, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->usernameField Landroid/widget/EditText;
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> bind : NOT OBFUSCATED
+// ActivityMain1Binding.bind : NOT-OBFUSCATED
 v0, Lcom/jordansamhi/securitymobilecomputing/R$id;->passwordField I
 v3, v0, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View; I)Landroid/view/View;
 v1
@@ -208,14 +208,14 @@ v3
 v0, v3, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 v0
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> inflate : NOT OBFUSCATED
+// ActivityMain1Binding.inflate : NOT-OBFUSCATED
 v0, 0
 v1, 0
 v2, v0, v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->inflate(Landroid/view/LayoutInflater; Landroid/view/ViewGroup; Z)Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;
 v2
 v2
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> inflate : NOT OBFUSCATED
+// ActivityMain1Binding.inflate : NOT-OBFUSCATED
 v0, Lcom/jordansamhi/securitymobilecomputing/R$layout;->activity_main1 I
 v1, 0
 v2, v0, v3, v1, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
@@ -226,22 +226,22 @@ v2, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->
 v2
 v2
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> getRoot : NOT OBFUSCATED
+// ActivityMain1Binding.getRoot : NOT-OBFUSCATED
 v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->getRoot()Landroidx/constraintlayout/widget/ConstraintLayout;
 v0
 v0
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding; -> getRoot : NOT OBFUSCATED
+// ActivityMain1Binding.getRoot : NOT-OBFUSCATED
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMain1Binding;->rootView Landroidx/constraintlayout/widget/ConstraintLayout;
 v0
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> <init> : NOT OBFUSCATED
+// ActivityMainBinding.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 v1, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->rootView Landroidx/constraintlayout/widget/ConstraintLayout;
 v2, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->passwordField Landroid/widget/EditText;
 v3, v0, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->usernameField Landroid/widget/EditText;
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> bind : NOT OBFUSCATED
+// ActivityMainBinding.bind : NOT-OBFUSCATED
 v0, Lcom/jordansamhi/securitymobilecomputing/R$id;->passwordField I
 v3, v0, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View; I)Landroid/view/View;
 v1
@@ -267,14 +267,14 @@ v3
 v0, v3, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 v0
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> inflate : NOT OBFUSCATED
+// ActivityMainBinding.inflate : NOT-OBFUSCATED
 v0, 0
 v1, 0
 v2, v0, v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater; Landroid/view/ViewGroup; Z)Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;
 v2
 v2
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> inflate : NOT OBFUSCATED
+// ActivityMainBinding.inflate : NOT-OBFUSCATED
 v0, Lcom/jordansamhi/securitymobilecomputing/R$layout;->activity_main I
 v1, 0
 v2, v0, v3, v1, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
@@ -285,18 +285,18 @@ v2, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->b
 v2
 v2
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> getRoot : NOT OBFUSCATED
+// ActivityMainBinding.getRoot : NOT-OBFUSCATED
 v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->getRoot()Landroidx/constraintlayout/widget/ConstraintLayout;
 v0
 v0
 
-// Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding; -> getRoot : NOT OBFUSCATED
+// ActivityMainBinding.getRoot : NOT-OBFUSCATED
 v0, v1, Lcom/jordansamhi/securitymobilecomputing/databinding/ActivityMainBinding;->rootView Landroidx/constraintlayout/widget/ConstraintLayout;
 v0
 
-// Lorg/intellij/lang/annotations/JdkConstants; -> <init> : NOT OBFUSCATED
+// JdkConstants.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// Lorg/intellij/lang/annotations/PrintFormatPattern; -> <init> : NOT OBFUSCATED
+// PrintFormatPattern.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 

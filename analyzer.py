@@ -6,6 +6,7 @@ import yaml
 from androguard.misc import AnalyzeAPK, Analysis
 from androguard.util import set_log
 
+# from obf_ml_detector import ObfuscationDetector
 from obf_detector import ObfuscationDetector
 
 # some settings
