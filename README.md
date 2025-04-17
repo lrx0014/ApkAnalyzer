@@ -22,6 +22,6 @@ Usage: python analyzer.py <path_to_apk_file> [-o output.json] [-l WARNING] [-a] 
 ```
 
 Two files will be generated:
-- a result file specified by -o (optional)
-- a snippets.txt will be generated in the current directory, recording the decompiled smali code, and each method is marked with the possibility of being obfuscated ('MAY-BE-OBFUSCATED' or 'NOT-OBFUSCATED')
+- a [result](result.yaml) file specified by -o (optional)
+- a [snippets.txt](snippets.txt) will be generated in the current directory, recording the decompiled smali code, and each method is marked with the possibility of being obfuscated ('MAY-BE-OBFUSCATED' or 'NOT-OBFUSCATED')
 
