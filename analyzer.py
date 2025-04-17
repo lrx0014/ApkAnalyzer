@@ -1,9 +1,12 @@
-import sys
-import yaml
 import re
+import sys
 import zipfile
-from androguard.misc import AnalyzeAPK
+
+import yaml
+from androguard.misc import AnalyzeAPK, Analysis
 from androguard.util import set_log
+
+from obf_detector import ObfuscationDetector
 
 # some settings
 scan_all = False
@@ -12,32 +15,34 @@ log_level = "WARNING"
 def analyze_apk(apk_path):
     print(f"Analyzing file: {apk_path}")
     print(f"scan user code only: {not scan_all}")
+    print()
 
-    a, d, dx = AnalyzeAPK(apk_path)
+    apk, dex, analysis = AnalyzeAPK(apk_path)
 
-    activities = a.get_activities()
-    services = a.get_services()
-    receivers = a.get_receivers()
+    activities = apk.get_activities()
+    services = apk.get_services()
+    receivers = apk.get_receivers()
 
     result = {
         "activities": activities,
         "services": services,
         "receivers": receivers,
-        "providers": a.get_providers(),
-        "main_activity": a.get_main_activity(),
-        "permissions": a.get_permissions(),
+        "providers": apk.get_providers(),
+        "main_activity": apk.get_main_activity(),
+        "permissions": apk.get_permissions(),
         "intent_filters": {
-            "activities": {act: a.get_intent_filters("activity", act) for act in activities},
-            "services": {srv: a.get_intent_filters("service", srv) for srv in services},
-            "receivers": {rcv: a.get_intent_filters("receiver", rcv) for rcv in receivers},
+            "activities": {act: apk.get_intent_filters("activity", act) for act in activities},
+            "services": {srv: apk.get_intent_filters("service", srv) for srv in services},
+            "receivers": {rcv: apk.get_intent_filters("receiver", rcv) for rcv in receivers},
         },
-        # "interesting_strings": extract_interesting_strings(dx),
+        "interesting_strings": extract_interesting_strings(analysis),
         "native_libraries": extract_native_libraries(apk_path),
-        "dynamic_code_loading": detect_dynamic_loading(dx),
-        # "obfuscation_indicators": detect_obfuscation(dx),
-        "dangerous_permissions": detect_dangerous_permissions(a.get_permissions()),
-        # "risk_score": calculate_risk_score(a, dx),
+        "dynamic_code_loading": detect_dynamic_loading(analysis),
+        "obfuscation_indicators": detect_obfuscation(analysis),
+        "dangerous_permissions": detect_dangerous_permissions(apk.get_permissions()),
     }
+
+    result["risk_score"] = calculate_risk_score(result)
 
     return result
 
@@ -53,18 +58,27 @@ def is_user_code(class_name):
                 class_name.startswith("Lkotlinx/"))
 
 
-def extract_interesting_strings(dx):
+def extract_interesting_strings(analysis: Analysis):
     pattern = re.compile(r"https?://|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+|api[_-]?key|token", re.IGNORECASE)
-    matches = []
-    for sref in dx.get_string_references():
-        method = sref.method
+    matches = set()
+
+    for method in analysis.get_methods():
         if method.is_external():
             continue
-        if is_user_code(method.class_name):
-            s = sref.get_string()
-            if pattern.search(s):
-                matches.append(s)
-    return list(set(matches))
+        if not is_user_code(method.class_name):
+            continue
+
+        for bb in method.get_basic_blocks().get():
+            for ins in bb.get_instructions():
+                if ins.get_name() == "const-string":
+                    out = ins.get_output()
+                    match = re.search(r'"(.*?)"', out)
+                    if match:
+                        s = match.group(1)
+                        if pattern.search(s):
+                            matches.add(s)
+
+    return list(matches)
 
 
 def extract_native_libraries(apk_path):
@@ -72,7 +86,7 @@ def extract_native_libraries(apk_path):
         return [f for f in zipf.namelist() if f.startswith("lib/") and f.endswith(".so")]
 
 
-def detect_dynamic_loading(dx):
+def detect_dynamic_loading(analysis: Analysis):
     dynamic_related_calls = [
         "Ldalvik/system/DexClassLoader;",
         "Ldalvik/system/PathClassLoader;",
@@ -81,7 +95,7 @@ def detect_dynamic_loading(dx):
         "forName",
     ]
     findings = []
-    for method in dx.get_methods():
+    for method in analysis.get_methods():
         if method.is_external():
             continue
         class_name = method.class_name
@@ -95,27 +109,27 @@ def detect_dynamic_loading(dx):
     return findings
 
 
-def detect_obfuscation(dx):
-    short_names = 0
-    encrypted_strings = 0
-    for cls in dx.get_classes():
-        if not is_user_code(cls.name):
+def detect_obfuscation(analysis: Analysis):
+    snippets = []
+    metas = []
+
+    for m in analysis.get_methods():
+        if m.is_external() or not is_user_code(m.class_name):
             continue
-        if len(cls.name.split("/")) > 1:
-            name_part = cls.name.split("/")[-1].strip(";")
-            if len(name_part) <= 2:
-                short_names += 1
-    for ref in dx.get_string_references():
-        method = ref.method
-        if method.is_external() or not is_user_code(method.class_name):
-            continue
-        s = ref.get_string()
-        if len(s) > 16 and re.fullmatch(r"[A-Za-z0-9+/=]+", s):
-            encrypted_strings += 1
+
+        ins_lines = [ins.get_output() for bb in m.get_basic_blocks().get()
+                              for ins in bb.get_instructions()]
+        snippet = "\n".join(ins_lines).strip()
+        if snippet:
+            metas.append((m.class_name, m.name))
+            snippets.append(snippet)
+
+    detector = ObfuscationDetector()
+    results = detector.classify_and_save(snippets, metas, output_path="snippets.txt")
 
     return {
-        "short_named_classes": short_names,
-        "potentially_encrypted_strings": encrypted_strings
+        "obfuscated_methods": sum(1 for r in results if r),
+        "total_methods": len(results)
     }
 
 
@@ -136,12 +150,14 @@ def detect_dangerous_permissions(permissions):
     return flagged
 
 
-def calculate_risk_score(a, dx):
-    score = 0
-    score += len(detect_dangerous_permissions(a.get_permissions())) * 2
-    score += len(detect_dynamic_loading(dx))
-    obf = detect_obfuscation(dx)
-    score += obf["short_named_classes"] + obf["potentially_encrypted_strings"]
+def calculate_risk_score(result: dict) -> int:
+    perms = result.get("dangerous_permissions", [])
+    score = len(perms) * 2
+    dyn = result.get("dynamic_code_loading", [])
+    score += len(dyn)
+    obf = result.get("obfuscation_indicators", {}).get("obfuscated_methods", 0)
+    score += obf
+
     return min(score, 10)
 
 
@@ -195,6 +211,8 @@ def main():
         print(f"result saved to {output_path}")
     else:
         print(yaml_result)
+
+    print()
 
 
 if __name__ == "__main__":

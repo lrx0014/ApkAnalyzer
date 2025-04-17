@@ -16,6 +16,11 @@ intent_filters:
       - android.intent.category.LAUNCHER
   services: {}
   receivers: {}
+interesting_strings: []
 native_libraries: []
 dynamic_code_loading: []
+obfuscation_indicators:
+  obfuscated_methods: 1
+  total_methods: 33
 dangerous_permissions: []
+risk_score: 1
