@@ -1,5 +1,5 @@
 import sys
-import json
+import yaml
 import re
 import zipfile
 from androguard.misc import AnalyzeAPK
@@ -187,14 +187,14 @@ def main():
     set_log(log_level)
 
     result = analyze_apk(apk_path)
-    json_result = json.dumps(result, indent=2)
+    yaml_result = yaml.dump(result, sort_keys=False, allow_unicode=True)
 
     if output_path:
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(json_result)
+            f.write(yaml_result)
         print(f"result saved to {output_path}")
     else:
-        print(json_result)
+        print(yaml_result)
 
 
 if __name__ == "__main__":
