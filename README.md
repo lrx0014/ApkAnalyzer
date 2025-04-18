@@ -7,6 +7,10 @@
 > It is a **REAL** piece of malware, so absolutely **DO NOT** install it on your real device! 
 
 ## How to Use
+### Quick Start
+- See Colab notebook: https://colab.research.google.com/drive/1SDxx3n3FZ6rqCgr_raEBA9lyhvRBGJIx
+
+### Local run: Step-by-Step
 ```shell
 # 0. a python-3 env is required.
 
