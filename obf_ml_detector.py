@@ -33,7 +33,8 @@ class ObfuscationDetector:
 
         with open(output_path, "w", encoding="utf-8") as f:
             for (cls, name), snippet, res in zip(metas, code_snippets, results):
-                tag = "OBFUSCATED" if res else "NOT OBFUSCATED"
+                tag = "MAY-BE-OBFUSCATED" if obf else "NOT-OBFUSCATED"
+
                 f.write(f"// {cls} -> {name} : {tag}\n")
                 f.write(snippet)
                 f.write("\n\n")
