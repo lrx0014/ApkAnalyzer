@@ -7,7 +7,7 @@
 pip install -r requirements.txt
 
 # 2. run the script to start your analysis
-python analyzer.py ./your_app.apk -o result.yaml
+python analyzer.py ./test_malicious_sample.apk -o result.yaml
 
 # 3. more usage examples:
 python analyzer.py -h
@@ -24,4 +24,10 @@ Usage: python analyzer.py <path_to_apk_file> [-o output.json] [-l WARNING] [-a] 
 Two files will be generated:
 - a [result](result.yaml) file specified by -o (optional)
 - a [snippets.txt](snippets.txt) will be generated in the current directory, recording the decompiled smali code, and each method is marked with the possibility of being obfuscated ('MAY-BE-OBFUSCATED' or 'NOT-OBFUSCATED')
+
+> ⚠️ **Warning:**  
+> the [test_malicious_sample.apk](https://github.com/ashishb/android-malware/tree/master/benews) comes from the following repo:
+> - https://github.com/ashishb/android-malware
+> 
+> It is a **REAL** piece of malware, so absolutely do not install it on your real device! 
 

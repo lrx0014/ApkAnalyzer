@@ -1,26 +1,52 @@
 activities:
-- com.jordansamhi.securitymobilecomputing.MainActivity1
-services: []
-receivers: []
-providers:
-- androidx.startup.InitializationProvider
-main_activity: com.jordansamhi.securitymobilecomputing.MainActivity1
+- org.benews.BeNews
+services:
+- org.benews.PullIntentService
+receivers:
+- org.benews.BootManager
+providers: []
+main_activity: org.benews.BeNews
 permissions:
-- com.jordansamhi.securitymobilecomputing.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+- android.permission.WRITE_EXTERNAL_STORAGE
+- android.permission.INTERNET
+- android.permission.READ_PHONE_STATE
 intent_filters:
   activities:
-    com.jordansamhi.securitymobilecomputing.MainActivity1:
+    org.benews.BeNews:
       action:
       - android.intent.action.MAIN
       category:
       - android.intent.category.LAUNCHER
-  services: {}
-  receivers: {}
-interesting_strings: []
-native_libraries: []
-dynamic_code_loading: []
+  services:
+    org.benews.PullIntentService: {}
+  receivers:
+    org.benews.BootManager:
+      action:
+      - android.intent.action.BOOT_COMPLETED
+      - android.intent.action.USER_PRESENT
+interesting_strings:
+- 46.38.48.178
+native_libraries:
+- lib/armeabi/libbson.so
+dynamic_code_loading:
+- class: Lorg/benews/BackgroundSocket$SocketAsyncTask;
+  method: printSocketInfo
+  instruction: v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+- class: Lorg/benews/BootManager;
+  method: onReceive
+  instruction: v0, v3, v1, Landroid/content/Intent;-><init>(Landroid/content/Context;
+    Ljava/lang/Class;)V
+- class: Lorg/benews/PullIntentService;
+  method: onCreate
+  instruction: v3, v8, v9, Landroid/content/Intent;-><init>(Landroid/content/Context;
+    Ljava/lang/Class;)V
+- class: Lorg/benews/BeNews;
+  method: onCreate
+  instruction: v0, v1, v2, Landroid/content/Intent;-><init>(Landroid/content/Context;
+    Ljava/lang/Class;)V
 obfuscation_indicators:
-  obfuscated_methods: 1
-  total_methods: 33
-dangerous_permissions: []
-risk_score: 1
+  obfuscated_methods: 0
+  total_methods: 135
+dangerous_permissions:
+- android.permission.READ_PHONE_STATE
+risk_score: Dangerous(2)

@@ -2,39 +2,40 @@ import re
 import math
 
 class ObfuscationDetector:
-    def __init__(self, entropy_threshold=4.5, min_str_len=30, short_name_len=2):
-        self.entropy_threshold = entropy_threshold
-        self.min_str_len = min_str_len
+    def __init__(self, min_enc_len: int = 32, short_name_len: int = 2):
+        self.min_enc_len = min_enc_len
         self.short_name_len = short_name_len
+        # Hex
+        self.hex_pattern = re.compile(rf'^[A-Fa-f0-9]{{{min_enc_len},}}$')
+        # Base64
+        self.b64_pattern = re.compile(rf'^[A-Za-z0-9+/]{{{min_enc_len},}}={0, 2}$')
 
-    @staticmethod
-    def shannon_entropy(s: str) -> float:
-        if not s:
-            return 0.0
-        freq = {}
-        for ch in s:
-            freq[ch] = freq.get(ch, 0) + 1
-        entropy = 0.0
-        length = len(s)
-        for count in freq.values():
-            p = count / length
-            entropy -= p * math.log2(p)
-        return entropy
 
     def classify_and_save(self, code_snippets, metas, output_path="snippets.txt"):
         results = []
         with open(output_path, 'w', encoding='utf-8') as f:
             for (cls, mth), snippet in zip(metas, code_snippets):
-                # short class/method name
+                # detect short class/method names
                 simple_cls = cls[1:-1].split('/')[-1] if cls.startswith('L') and cls.endswith(';') else cls
-                obf = len(simple_cls) <= self.short_name_len or len(mth) <= self.short_name_len
+                # some classes such as 'R' are built-in types
+                # even though their class name is short, they shouldn't be considered as obfuscation.
+                if simple_cls == "R" or simple_cls.startswith("R$") or simple_cls in ("BuildConfig", "Manifest"):
+                    obf = False
+                else:
+                    obf = len(simple_cls) <= self.short_name_len or len(mth) <= self.short_name_len
 
-                # otherwise
-                # use entropy to determine whether a string may be randomly generated
+                # detect if encrypted strings exist
                 if not obf:
                     strs = re.findall(r'"(.*?)"', snippet)
                     for s in strs:
-                        if len(s) > self.min_str_len and self.shannon_entropy(s) > self.entropy_threshold:
+                        if len(s) < self.min_enc_len:
+                            continue
+                        # Hex type string detected
+                        if self.hex_pattern.match(s):
+                            obf = True
+                            break
+                        # Base64 type string detected
+                        if self.b64_pattern.match(s):
                             obf = True
                             break
 

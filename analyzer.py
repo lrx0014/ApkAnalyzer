@@ -43,7 +43,8 @@ def analyze_apk(apk_path):
         "dangerous_permissions": detect_dangerous_permissions(apk.get_permissions()),
     }
 
-    result["risk_score"] = calculate_risk_score(result)
+    risk_score = calculate_risk_score(result)
+    result["risk_score"] = f"{risk_score_display(risk_score)}({risk_score})"
 
     return result
 
@@ -152,14 +153,35 @@ def detect_dangerous_permissions(permissions):
 
 
 def calculate_risk_score(result: dict) -> int:
+    # for each threat category present, the risk score increases by 1 point
+    # When the overall score is:
+    #   0: Safe
+    #   1: Suspicious
+    #   2: Dangerous
+    #   3: Critical
+    score = 0
     perms = result.get("dangerous_permissions", [])
-    score = len(perms) * 2
+    if len(perms) > 0:
+        score += 1
     dyn = result.get("dynamic_code_loading", [])
-    score += len(dyn)
+    if len(dyn) > 0:
+        score += 1
     obf = result.get("obfuscation_indicators", {}).get("obfuscated_methods", 0)
-    score += obf
+    if obf > 0:
+        score += 1
 
-    return min(score, 10)
+    return min(score, 3)
+
+
+def risk_score_display(score: int) -> str:
+    risk_def = {
+        0: 'Safe',
+        1: 'Suspicious',
+        2: 'Dangerous',
+        3: 'Critical',
+    }
+
+    return risk_def.get(score, 'Unknown')
 
 
 def print_help():

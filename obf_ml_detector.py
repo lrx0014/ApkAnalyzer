@@ -1,8 +1,8 @@
 import torch
 from obfuscation_detection import ObfuscationClassifier, PlatformType
 
-# tried to use a ML-based obfuscation_detection library,
-# however, this lib is mainly for CLI commands obf detection
+# tried to use an ML-based obfuscation_detection library,
+# however, the pre-trained model this lib used, is mainly for CLI commands obf detection
 
 class ObfuscationDetector:
     def __init__(self, platform: PlatformType = PlatformType.ALL):
