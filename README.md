@@ -4,12 +4,15 @@
 > the [test_malicious_sample.apk](https://github.com/ashishb/android-malware/tree/master/benews) comes from the following repo:
 > - https://github.com/ashishb/android-malware
 > 
-> It is a **REAL** piece of malware, so absolutely DO NOT install it on your real device! 
+> It is a **REAL** piece of malware, so absolutely **DO NOT** install it on your real device! 
 
 ## How to Use
 ```shell
-# python 3
-# 1. install requirements, pytorch is required for the ML-based obfuscation detection
+# 0. a python-3 env is required.
+
+# 1. install requirements, 
+#    pytorch is required for the ML-based obfuscation detection (only if you want to use it)
+#    import obf_ml_detector instead of obf_detector in analyzer.py if you want to try an ML-based obf detector
 pip install -r requirements.txt
 
 # 2. run the script to start your analysis
