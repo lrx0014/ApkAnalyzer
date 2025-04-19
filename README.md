@@ -25,9 +25,9 @@ python analyzer.py ./test_malicious_sample.apk -o result.yaml
 # 3. more usage examples:
 python analyzer.py -h
 
-Usage: python analyzer.py <path_to_apk_file> [-o output.json] [-l WARNING] [-a] [-h]
+Usage: python analyzer.py <path_to_apk_file> [-o output.yaml] [-l WARNING] [-a] [-h]
     -o: (optional) specify output file path.
-        if not specified, print the logs on stdout only
+        if not specified, print the results on stdout only
     -l: (optional) specify logging level, default to WARNING
         can be one of (TRACE, DEBUG, INFO, SUCCESS, WARNING, ERROR, CRITICAL)
     -h: show this help info
