@@ -1,4 +1,4 @@
-# ApkAnalyzer
+# ApkAnalyzer V2 (malware family analysis)
 
 > ⚠️ **Warning:**  
 > the [test_malicious_sample.apk](https://github.com/ashishb/android-malware/tree/master/benews) comes from the following repo:
@@ -15,26 +15,23 @@
 # 0. a python-3 env is required.
 
 # 1. install requirements, 
-#    pytorch is required for the ML-based obfuscation detection (only if you want to use it)
-#    import obf_ml_detector instead of obf_detector in analyzer.py if you want to try an ML-based obf detector
 pip install -r requirements.txt
 
-# 2. run the script to start your analysis
-python analyzer.py ./test_malicious_sample.apk -o result.yaml
+# 2-a. run the script to start your analysis and output the results
+python malware_analyzer.py ./malware_analyzer/test_malicious_sample.apk
+
+# 2-b. or save the results to a file
+python malware_analyzer.py ./malware_analyzer/test_malicious_sample.apk > result_malware_analysis.txt
 
 # 3. more usage examples:
-python analyzer.py -h
+python malware_analyzer.py -h
 
-Usage: python analyzer.py <path_to_apk_file> [-o output.yaml] [-l WARNING] [-a] [-h]
-    -o: (optional) specify output file path.
-        if not specified, print the results on stdout only
+Usage: python malware_analyzer.py <path_to_apk_file> [-l WARNING] [-h]
     -l: (optional) specify logging level, default to WARNING
         can be one of (TRACE, DEBUG, INFO, SUCCESS, WARNING, ERROR, CRITICAL)
     -h: show this help info
     
 ```
 
-Two files will be generated:
-- a [result](result.yaml) file specified by -o (optional)
-- a [snippets.txt](snippets.txt) will be generated in the current directory, recording the decompiled smali code, and each method is marked with the possibility of being obfuscated ('MAY-BE-OBFUSCATED' or 'NOT-OBFUSCATED')
-
+example output:
+- a [result_malware_analysis.txt](result_malware_analysis.txt) file specified by -o (optional)
