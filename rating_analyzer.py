@@ -186,7 +186,7 @@ def risk_score_display(score: int) -> str:
 
 def print_help():
     print()
-    print("Usage: python analyzer.py <path_to_apk_file> [-o output.json] [-l WARNING] [-a] [-h]")
+    print("Usage: python rating_analyzer.py <path_to_apk_file> [-o output.json] [-l WARNING] [-a] [-h]")
     print("    -o: (optional) specify output file path.")
     print("        if not specified, print the logs on stdout only")
     print("    -l: (optional) specify logging level, default to WARNING")
