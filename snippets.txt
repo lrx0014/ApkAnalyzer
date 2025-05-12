@@ -1,1670 +1,449 @@
-// BackgroundSocket$1.<init> : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket$1;->this$0 Lorg/benews/BackgroundSocket;
+// ColorKt.<clinit> : NOT-OBFUSCATED
+v0, 4291869951
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Purple80 J
+v0, 4291609308
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->PurpleGrey80 J
+v0, 4293900488
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Pink80 J
+v0, 4284895396
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Purple40 J
+v0, 4284636017
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->PurpleGrey40 J
+v0, 4286403168
+v0, v1, Landroidx/compose/ui/graphics/ColorKt;->Color(J)J
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Pink40 J
+
+// ColorKt.getPink40 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Pink40 J
+v0
+
+// ColorKt.getPink80 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Pink80 J
+v0
+
+// ColorKt.getPurple40 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Purple40 J
+v0
+
+// ColorKt.getPurple80 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->Purple80 J
+v0
+
+// ColorKt.getPurpleGrey40 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->PurpleGrey40 J
+v0
+
+// ColorKt.getPurpleGrey80 : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/ColorKt;->PurpleGrey80 J
+v0
+
+// ThemeKt$$ExternalSyntheticLambda0.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
+v1, v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$0 Z
+v2, v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$1 Z
+v3, v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$2 Lkotlin/jvm/functions/Function2;
+v4, v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$3 I
+v5, v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$4 I
 
-// BackgroundSocket$1.run : NOT-OBFUSCATED
-v1, v2, Lorg/benews/BackgroundSocket$1;->this$0 Lorg/benews/BackgroundSocket;
-v1, Lorg/benews/BackgroundSocket;->access$000(Lorg/benews/BackgroundSocket;)Ljava/net/Socket;
-v1
-v1, Ljava/net/Socket;->close()V
-
-v0
-v0, Ljava/lang/Exception;->printStackTrace()V
--5h
-
-// BackgroundSocket$SocketAsyncTask.<init> : NOT-OBFUSCATED
-v0, 0
-v2, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v1, Landroid/os/AsyncTask;-><init>()V
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->running Z
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->connectionError Z
-v3, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->args Ljava/util/HashMap;
-
-// BackgroundSocket$SocketAsyncTask.<init> : NOT-OBFUSCATED
-v0, v1, v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;-><init>(Lorg/benews/BackgroundSocket; Ljava/util/HashMap;)V
-
-// BackgroundSocket$SocketAsyncTask.createSSLSocket : NOT-OBFUSCATED
-v2, "46.38.48.178"
-v3, 443
-v5, v2, v3, Ljavax/net/SocketFactory;->createSocket(Ljava/lang/String; I)Ljava/net/Socket;
-v1
-v1, Ljavax/net/ssl/SSLSocket;
-Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
-v0
-v1, Ljavax/net/ssl/SSLSocket;->startHandshake()V
-v4, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->printServerCertificate(Ljavax/net/ssl/SSLSocket;)V
-v4, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->printSocketInfo(Ljavax/net/ssl/SSLSocket;)V
-v1
-
-// BackgroundSocket$SocketAsyncTask.getSocketFactory : NOT-OBFUSCATED
-v12, 0
-v9, "X.509"
-v9, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
-v3
-v9, v13, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v9, v9, Lorg/benews/BackgroundSocket;->assets Landroid/content/res/AssetManager;
-v10, "server.crt"
-v9, v10, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-v2
-v3, v2, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
-v1
-v10, Ljava/lang/System;->out Ljava/io/PrintStream;
-v9, Ljava/lang/StringBuilder;
-v9, Ljava/lang/StringBuilder;-><init>()V
-v11, "ca="
-v9, v11, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v11
-v0, v1
-v0, Ljava/security/cert/X509Certificate;
-v9, v0
-v9, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
-v9
-v11, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v9
-v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v9
-v10, v9, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-v2, Ljava/io/InputStream;->close()V
-Ljava/security/KeyStore;->getDefaultType()Ljava/lang/String;
+// ThemeKt$$ExternalSyntheticLambda0.invoke : NOT-OBFUSCATED
+v0, v7, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$0 Z
+v1, v7, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$1 Z
+v2, v7, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$2 Lkotlin/jvm/functions/Function2;
+v3, v7, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$3 I
+v4, v7, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;->f$4 I
+v5, v8
+v5, Landroidx/compose/runtime/Composer;
+v9, Ljava/lang/Integer;
+v9, Ljava/lang/Integer;->intValue()I
 v6
-v6, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
-v5
-v5, v12, v12, Ljava/security/KeyStore;->load(Ljava/io/InputStream; [C)V
-v9, "ca"
-v5, v9, v1, Ljava/security/KeyStore;->setCertificateEntry(Ljava/lang/String; Ljava/security/cert/Certificate;)V
-Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+v0 ... v6, Lcom/ryan/nativecall/ui/theme/ThemeKt;->$r8$lambda$ElE8x5eSUhXc4EwcbSLxAFVMpAM(Z Z Lkotlin/jvm/functions/Function2; I I Landroidx/compose/runtime/Composer; I)Lkotlin/Unit;
 v8
-v8, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
-v7
-v7, v5, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
-v9, "TLS"
-v9, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
-v4
-v7, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
-v9
-v4, v12, v9, v12, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager; [Ljavax/net/ssl/TrustManager; Ljava/security/SecureRandom;)V
-v4, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
-v9
-v9
-v9
-v2, Ljava/io/InputStream;->close()V
-v9
+v8
 
-// BackgroundSocket$SocketAsyncTask.printServerCertificate : NOT-OBFUSCATED
-v8, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
+// ThemeKt.$r8$lambda$ElE8x5eSUhXc4EwcbSLxAFVMpAM : NOT-OBFUSCATED
+v0 ... v6, Lcom/ryan/nativecall/ui/theme/ThemeKt;->NativeCallTheme$lambda$0(Z Z Lkotlin/jvm/functions/Function2; I I Landroidx/compose/runtime/Composer; I)Lkotlin/Unit;
+v0
+v0
+
+// ThemeKt.<clinit> : NOT-OBFUSCATED
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPurple80()J
+v1
+
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPurpleGrey80()J
+v11
+
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPink80()J
+v19
+v74, 15
+v75, 0
+v3, 0
+v5, 0
+v7, 0
+v9, 0
+v13, 0
+v15, 0
+v17, 0
+v21, 0
+v23, 0
+v25, 0
+v27, 0
+v29, 0
+v31, 0
+v33, 0
+v35, 0
+v37, 0
+v39, 0
+v41, 0
+v43, 0
+v45, 0
+v47, 0
+v49, 0
+v51, 0
+v53, 0
+v55, 0
+v57, 0
+v59, 0
+v61, 0
+v63, 0
+v65, 0
+v67, 0
+v69, 0
+v71, 0
+v73, -546
+v1 ... v75, Landroidx/compose/material3/ColorSchemeKt;->darkColorScheme-C-Xl9yA$default(J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J I I Ljava/lang/Object;)Landroidx/compose/material3/ColorScheme;
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ThemeKt;->DarkColorScheme Landroidx/compose/material3/ColorScheme;
+
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPurple40()J
+v1
+
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPurpleGrey40()J
+v11
+
+Lcom/ryan/nativecall/ui/theme/ColorKt;->getPink40()J
+v19
+v1 ... v75, Landroidx/compose/material3/ColorSchemeKt;->lightColorScheme-C-Xl9yA$default(J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J J I I Ljava/lang/Object;)Landroidx/compose/material3/ColorScheme;
+v0
+v0, Lcom/ryan/nativecall/ui/theme/ThemeKt;->LightColorScheme Landroidx/compose/material3/ColorScheme;
+
+// ThemeKt.NativeCallTheme : NOT-OBFUSCATED
+v0, "content"
+v12, v0, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object; Ljava/lang/String;)V
+v0, -1586084881
+v13, v0, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
 v4
-v4, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
-v3
+v1, "C(NativeCallTheme)P(1,2)52@1581L114:Theme.kt#vbnbdn"
+v4, v1, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer; Ljava/lang/String;)V
+v1, v14
+v2, v14, 6
+v2, +010h
+v2, v15, 1
+v2, +00ah
+v4, v10, Landroidx/compose/runtime/Composer;->changed(Z)Z
+v5
+v5, +004h
+v5, 4
++2h
+v5, 2
+v1, v5
+v5, v15, 2
+v5, +005h
+v1, v1, 48
++11h
+v6, v14, 48
+v6, +00eh
+v4, v11, Landroidx/compose/runtime/Composer;->changed(Z)Z
+v7
+v7, +005h
+v7, 32
++3h
+v7, 16
+v1, v7
+v7, v15, 4
+v7, +005h
+v1, v1, 384
++11h
+v7, v14, 384
+v7, +00eh
+v4, v12, Landroidx/compose/runtime/Composer;->changedInstance(Ljava/lang/Object;)Z
+v7
+v7, +005h
+v7, 256
++3h
+v7, 128
+v1, v7
+v7, v1, 147
+v8, 146
+v7, v8, +012h
+v4, Landroidx/compose/runtime/Composer;->getSkipping()Z
+v7
+v7, +003h
++ah
+v4, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
+v2, v11
+v9, v1
+v6, v4
+v1, v10
++0a7h
+v4, Landroidx/compose/runtime/Composer;->startDefaults()V
+v7, "37@1094L21"
+v4, v7, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer; Ljava/lang/String;)V
+v7, v14, 1
+v7, +016h
+v4, Landroidx/compose/runtime/Composer;->getDefaultsInvalid()Z
+v7
+v7, +003h
++eh
+v4, Landroidx/compose/runtime/Composer;->skipToGroupEnd()V
+v5, v15, 1
+v5, +004h
+v1, v1, -15
+v7, v10
+v8, v11
+v9, v1
++18h
+v7, v15, 1
+v7, +00ah
+v7, 0
+v4, v7, Landroidx/compose/foundation/DarkThemeKt;->isSystemInDarkTheme(Landroidx/compose/runtime/Composer; I)Z
+v2
+v1, v1, -15
++2h
+v2, v10
+v5, +007h
+v5, 1
+v9, v1
+v7, v2
+v8, v5
++4h
+v8, v11
+v9, v1
+v7, v2
+v4, Landroidx/compose/runtime/Composer;->endDefaults()V
+Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
+v1
+v1, +008h
+v1, -1
+v2, "com.ryan.nativecall.ui.theme.NativeCallTheme (Theme.kt:41)"
+v0, v9, v1, v2, Landroidx/compose/runtime/ComposerKt;->traceEventStart(I I I Ljava/lang/String;)V
+v0, 764170938
+v4, v0, Landroidx/compose/runtime/Composer;->startReplaceGroup(I)V
+v0, "44@1384L7"
+v4, v0, Landroidx/compose/runtime/ComposerKt;->sourceInformation(Landroidx/compose/runtime/Composer; Ljava/lang/String;)V
+
+v8, +02ah
+Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt;->getLocalContext()Landroidx/compose/runtime/ProvidableCompositionLocal;
+v0
+v0, Landroidx/compose/runtime/CompositionLocal;
 v1, 0
-v4, v3
-v1, v4, +073h
-v2, v3, v1
-v4, "BackgroundSocket"
-v5, Ljava/lang/StringBuilder;
-v5, Ljava/lang/StringBuilder;-><init>()V
-v6, "====Certificate:"
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+v2, 0
+v5, 2023513938
+v6, "CC:CompositionLocal.kt#9igjgp"
+v4, v5, v6, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerStart(Landroidx/compose/runtime/Composer; I Ljava/lang/String;)V
+v4, v0, Landroidx/compose/runtime/Composer;->consume(Landroidx/compose/runtime/CompositionLocal;)Ljava/lang/Object;
 v5
-v6, v1, 1
-v5, v6, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-v5
-v6, "===="
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v5
-v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v5
-v4, v5, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v4, "BackgroundSocket"
-v5, Ljava/lang/StringBuilder;
-v5, Ljava/lang/StringBuilder;-><init>()V
-v6, "-Public Key-
-"
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v5
-v2, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
-v6
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v5
-v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v5
-v4, v5, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v4, "BackgroundSocket"
-v5, Ljava/lang/StringBuilder;
-v5, Ljava/lang/StringBuilder;-><init>()V
-v6, "-Certificate Type-
- "
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v5
-v2, Ljava/security/cert/Certificate;->getType()Ljava/lang/String;
-v6
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v5
-v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v5
-v4, v5, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v4, Ljava/lang/System;->out Ljava/io/PrintStream;
-v4, Ljava/io/PrintStream;->println()V
-v1, v1, 1
--64h
-v0
-v4, "BackgroundSocket"
-v5, "Could not verify peer"
-v4, v5, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v0, Ljavax/net/ssl/SSLPeerUnverifiedException;->printStackTrace()V
-v4, -1
-v4, Ljava/lang/System;->exit(I)V
-
-// BackgroundSocket$SocketAsyncTask.printSocketInfo : NOT-OBFUSCATED
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "Socket class: "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Remote address = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getInetAddress()Ljava/net/InetAddress;
-v3
-v3, Ljava/net/InetAddress;->toString()Ljava/lang/String;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Remote port = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getPort()I
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Local socket address = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getLocalSocketAddress()Ljava/net/SocketAddress;
-v3
-v3, Ljava/lang/Object;->toString()Ljava/lang/String;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Local address = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getLocalAddress()Ljava/net/InetAddress;
-v3
-v3, Ljava/net/InetAddress;->toString()Ljava/lang/String;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Local port = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getLocalPort()I
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Need client authentication = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v5, Ljavax/net/ssl/SSLSocket;->getNeedClientAuth()Z
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v5, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-v0
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Cipher suite = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v0, Ljavax/net/ssl/SSLSession;->getCipherSuite()Ljava/lang/String;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "   Protocol = "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v0, Ljavax/net/ssl/SSLSession;->getProtocol()Ljava/lang/String;
-v3
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
-
-// BackgroundSocket$SocketAsyncTask.doInBackground : NOT-OBFUSCATED
-v2, [Ljava/util/HashMap;
-v1, v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->doInBackground([Ljava/util/HashMap;)Ljava/nio/ByteBuffer;
-v0
-v0
-
-// BackgroundSocket$SocketAsyncTask.doInBackground : NOT-OBFUSCATED
-v10, 0
-v11, 0
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->connectionError Z
-v1, "0"
-v11, v15
-v11, +018h
-v11, 0
-v11, v15, v11
-v12, "checksum"
-v11, v12, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v11
-v11, +00dh
-v11, 0
-v11, v15, v11
-v12, "checksum"
-v11, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v1
-v1, Ljava/lang/String;
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v11, Lorg/benews/BackgroundSocket;->access$300(Lorg/benews/BackgroundSocket;)Ljava/lang/String;
-v11
-v12, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v12, Lorg/benews/BackgroundSocket;->access$400(Lorg/benews/BackgroundSocket;)J
-v12
-v11, v12, v13, v1, Lorg/benews/BsonBridge;->getTokenBson(Ljava/lang/String; J Ljava/lang/String;)[B
-v4
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v11, Lorg/benews/BackgroundSocket;->access$500(Lorg/benews/BackgroundSocket;)Ljavax/net/SocketFactory;
-v11
-v11, +00bh
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->getSocketFactory()Ljavax/net/SocketFactory;
-v12
-v11, v12, Lorg/benews/BackgroundSocket;->access$502(Lorg/benews/BackgroundSocket; Ljavax/net/SocketFactory;)Ljavax/net/SocketFactory;
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v12, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v12, Lorg/benews/BackgroundSocket;->access$500(Lorg/benews/BackgroundSocket;)Ljavax/net/SocketFactory;
-v12
-v14, v12, Lorg/benews/BackgroundSocket$SocketAsyncTask;->createSSLSocket(Ljavax/net/SocketFactory;)Ljava/net/Socket;
-v12
-v11, v12, Lorg/benews/BackgroundSocket;->access$002(Lorg/benews/BackgroundSocket; Ljava/net/Socket;)Ljava/net/Socket;
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v11, Lorg/benews/BackgroundSocket;->access$000(Lorg/benews/BackgroundSocket;)Ljava/net/Socket;
-v11
-v11, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
-v3
-v5, Ljava/io/BufferedOutputStream;
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v11, Lorg/benews/BackgroundSocket;->access$000(Lorg/benews/BackgroundSocket;)Ljava/net/Socket;
-v11
-v11, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
-v11
-v5, v11, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
-v5, v4, Ljava/io/BufferedOutputStream;->write([B)V
-v5, Ljava/io/BufferedOutputStream;->flush()V
-v4, 0
-Ljava/lang/System;->gc()V
-v11, 4
-v9, v11, [B
-v3, v9, Ljava/io/InputStream;->read([B)I
-v6
-v6, +034h
-v9, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-v10
-v11, Ljava/nio/ByteOrder;->LITTLE_ENDIAN Ljava/nio/ByteOrder;
-v10, v11, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-v10, Ljava/nio/ByteBuffer;->getInt()I
-v8
-v11, v8, -4
-v0, v11, [B
-v8, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-v10
-v11, Ljava/nio/ByteOrder;->LITTLE_ENDIAN Ljava/nio/ByteOrder;
-v10, v11, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-v11, 0
-v12, v9
-v10, v9, v11, v12, Ljava/nio/ByteBuffer;->put([B I I)Ljava/nio/ByteBuffer;
-v11, v8, v6
-v11, +011h
-v14, v6, Lorg/benews/BackgroundSocket$SocketAsyncTask;->publishProgress(I)V
-v3, v0, Ljava/io/InputStream;->read([B)I
-v7
+v4, Landroidx/compose/runtime/ComposerKt;->sourceInformationMarkerEnd(Landroidx/compose/runtime/Composer;)V
+v0, v5
+v0, Landroid/content/Context;
 v7, +008h
-v11, 0
-v10, v0, v11, v7, Ljava/nio/ByteBuffer;->put([B I I)Ljava/nio/ByteBuffer;
-v6, v7
--12h
-v3, Ljava/io/InputStream;->close()V
-v5, Ljava/io/BufferedOutputStream;->close()V
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v11, Lorg/benews/BackgroundSocket;->access$000(Lorg/benews/BackgroundSocket;)Ljava/net/Socket;
-v11
-v11, Ljava/net/Socket;->close()V
-v4, 0
-Ljava/lang/System;->gc()V
-v10
+v0, Landroidx/compose/material3/DynamicTonalPaletteKt;->dynamicDarkColorScheme(Landroid/content/Context;)Landroidx/compose/material3/ColorScheme;
+v1
+v0, v1
++10h
+v0, Landroidx/compose/material3/DynamicTonalPaletteKt;->dynamicLightColorScheme(Landroid/content/Context;)Landroidx/compose/material3/ColorScheme;
+v1
+v0, v1
++ah
+v7, +006h
+v1, Lcom/ryan/nativecall/ui/theme/ThemeKt;->DarkColorScheme Landroidx/compose/material3/ColorScheme;
+v0, v1
++4h
+v1, Lcom/ryan/nativecall/ui/theme/ThemeKt;->LightColorScheme Landroidx/compose/material3/ColorScheme;
+v0, v1
+v4, Landroidx/compose/runtime/Composer;->endReplaceGroup()V
+
+Lcom/ryan/nativecall/ui/theme/TypeKt;->getTypography()Landroidx/compose/material3/Typography;
 v2
-v11, "BackgroundSocket"
-v12, Ljava/lang/StringBuilder;
-v12, Ljava/lang/StringBuilder;-><init>()V
-v13, "Exception :"
-v12, v13, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v12
-v12, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v12
-v12, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v12
-v11, v12, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v11, 1
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->connectionError Z
-v11, 0
-v11, v14, Lorg/benews/BackgroundSocket$SocketAsyncTask;->running Z
-v4, 0
-Ljava/lang/System;->gc()V
--24h
-v11
-v4, 0
-Ljava/lang/System;->gc()V
-v11
-
-// BackgroundSocket$SocketAsyncTask.getLast_timestamp : NOT-OBFUSCATED
-v0, v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;->access$400(Lorg/benews/BackgroundSocket;)J
-v0
-v0
-
-// BackgroundSocket$SocketAsyncTask.isConnectionError : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->connectionError Z
-v0
-
-// BackgroundSocket$SocketAsyncTask.isRunning : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->running Z
-v0
-
-// BackgroundSocket$SocketAsyncTask.noData : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;->access$200(Lorg/benews/BackgroundSocket;)Z
-v0
-v0
-
-// BackgroundSocket$SocketAsyncTask.onPostExecute : NOT-OBFUSCATED
-v1, Ljava/nio/ByteBuffer;
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->onPostExecute(Ljava/nio/ByteBuffer;)V
-
-// BackgroundSocket$SocketAsyncTask.onPostExecute : NOT-OBFUSCATED
-v8
-v9, +0e3h
-v9, Ljava/nio/ByteBuffer;->capacity()I
-v4
-v4, +0ddh
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, Lorg/benews/BackgroundSocket;->getDumpFolder()Ljava/lang/String;
-v4
-v4, v9, Lorg/benews/BsonBridge;->serializeBson(Ljava/lang/String; Ljava/nio/ByteBuffer;)Ljava/util/HashMap;
-v2
-v2, +097h
-v2, Ljava/util/HashMap;->size()I
-v4
-v4, +091h
-v4, "date"
-v2, v4, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v4
-v4, +025h
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->args Ljava/util/HashMap;
-v5, "date"
-v6, "date"
-v2, v6, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v6
-v4, v5, v6, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v5, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, "date"
-v2, v4, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v4
-v4, Ljava/lang/String;
-v4, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-v6
-v5, v6, v7, Lorg/benews/BackgroundSocket;->access$402(Lorg/benews/BackgroundSocket; J)J
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, Lorg/benews/BackgroundSocket;->serialise_ts()V
-v4, "checksum"
-v2, v4, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v4
-v4, +05eh
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->args Ljava/util/HashMap;
-v5, "checksum"
-v6, "checksum"
-v2, v6, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v6
-v4, v5, v6, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v4, "checksum"
-v2, v4, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v0
-v0, Ljava/lang/String;
-v4, "0"
-v0, v4, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
-v4
-v4, +041h
-v4, "path"
-v2, v4, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v4
-v4, +039h
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, Lorg/benews/BackgroundSocket;->access$600(Lorg/benews/BackgroundSocket;)Ljava/util/ArrayList;
-v4
-v4, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, Lorg/benews/BackgroundSocket;->saveStauts()V
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v4, Lorg/benews/BackgroundSocket;->updateListeners()V
-v4, "date"
-v2, v4, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v4
-v4, +018h
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->args Ljava/util/HashMap;
-v5, "date"
-v6, "date"
-v2, v6, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v6
-v4, v5, v6, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->args Ljava/util/HashMap;
-v5, "ok"
-v6, "0"
-v4, v5, v6, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v4, Lorg/benews/BackgroundSocket;->news_n I
-v4, v4, 1
-v4, Lorg/benews/BackgroundSocket;->news_n I
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v5, 0
-v4, v5, Lorg/benews/BackgroundSocket;->access$202(Lorg/benews/BackgroundSocket; Z)Z
-Ljava/lang/System;->gc()V
-v4, 0
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->running Z
-v8
-
-v3
-v4, "BackgroundSocket"
-v5, " (onPostExecute): failed to serialize ts "
-v4, v5, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--7ah
-v4
-v8
-v4
-v1
-v4, "BackgroundSocket"
-v5, Ljava/lang/StringBuilder;
-v5, Ljava/lang/StringBuilder;-><init>()V
-v6, " (onPostExecute): failed to parse "
-v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v5
-v6, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v6, Lorg/benews/BackgroundSocket;->access$400(Lorg/benews/BackgroundSocket;)J
-v6
-v5, v6, v7, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-v5
-v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v5
-v4, v5, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--3fh
-v4, v8, Lorg/benews/BackgroundSocket$SocketAsyncTask;->this$0 Lorg/benews/BackgroundSocket;
-v5, 1
-v4, v5, Lorg/benews/BackgroundSocket;->access$202(Lorg/benews/BackgroundSocket; Z)Z
--37h
-
-// BackgroundSocket$SocketAsyncTask.onPreExecute : NOT-OBFUSCATED
-v0, 1
-v0, v1, Lorg/benews/BackgroundSocket$SocketAsyncTask;->running Z
-v1, Landroid/os/AsyncTask;->onPreExecute()V
-
-// BackgroundSocket.<clinit> : NOT-OBFUSCATED
-v0, 0
-v0, Lorg/benews/BackgroundSocket;->serviceRunning Z
-v0, Lorg/benews/BackgroundSocket;->news_n I
-v0, 0
-v0, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-
-// BackgroundSocket.<init> : NOT-OBFUSCATED
-v3, 0
-v2, 0
-v4, Landroid/app/Activity;-><init>()V
-v3, v4, Lorg/benews/BackgroundSocket;->run Z
-v2, v4, Lorg/benews/BackgroundSocket;->main Lorg/benews/BeNews;
-v0, 0
-v0, v4, Lorg/benews/BackgroundSocket;->last_timestamp J
-v2, v4, Lorg/benews/BackgroundSocket;->dumpFolder Ljava/lang/String;
-v2, v4, Lorg/benews/BackgroundSocket;->imei Ljava/lang/String;
-v0, Ljava/util/HashMap;
-v0, Ljava/util/HashMap;-><init>()V
-v0, v4, Lorg/benews/BackgroundSocket;->args_for_bkg Ljava/util/HashMap;
-v3, v4, Lorg/benews/BackgroundSocket;->noData Z
-v2, v4, Lorg/benews/BackgroundSocket;->sf Ljavax/net/SocketFactory;
-v0, Ljava/util/ArrayList;
-v0, Ljava/util/ArrayList;-><init>()V
-v0, v4, Lorg/benews/BackgroundSocket;->listeners Ljava/util/ArrayList;
-
-// BackgroundSocket.Sleep : NOT-OBFUSCATED
-v1, v3, 1000
-v1, v1
-v1, v2, Ljava/lang/Thread;->sleep(J)V
-
-v0
-v0, Ljava/lang/InterruptedException;->printStackTrace()V
--5h
-
-// BackgroundSocket.access$000 : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->socket Ljava/net/Socket;
-v0
-
-// BackgroundSocket.access$002 : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->socket Ljava/net/Socket;
-v1
-
-// BackgroundSocket.access$200 : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->noData Z
-v0
-
-// BackgroundSocket.access$202 : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->noData Z
-v1
-
-// BackgroundSocket.access$300 : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->imei Ljava/lang/String;
-v0
-
-// BackgroundSocket.access$400 : NOT-OBFUSCATED
-v0, v2, Lorg/benews/BackgroundSocket;->last_timestamp J
-v0
-
-// BackgroundSocket.access$402 : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->last_timestamp J
-v1
-
-// BackgroundSocket.access$500 : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->sf Ljavax/net/SocketFactory;
-v0
-
-// BackgroundSocket.access$502 : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->sf Ljavax/net/SocketFactory;
-v1
-
-// BackgroundSocket.access$600 : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v0
-
-// BackgroundSocket.newCore : NOT-OBFUSCATED
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v0, +009h
-v0, Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;-><init>()V
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v1, v0, Lorg/benews/BackgroundSocket;->serviceMain Lorg/benews/PullIntentService;
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v0
-
-// BackgroundSocket.runUntilStop : NOT-OBFUSCATED
-v5, 1
-v4, 0
-v2, v6, Lorg/benews/BackgroundSocket;->run Z
-v2, +070h
-v0, 0
-v2, "date"
-v7, v2, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v2
-v2, +00dh
-v2, "date"
-v7, v2, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v2
-v2, Ljava/lang/String;
-v2, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, +00ah
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->isRunning()Z
-v2
-v2, +013h
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v3, 0
-v2, v6, v7, v3, Lorg/benews/BackgroundSocket$SocketAsyncTask;-><init>(Lorg/benews/BackgroundSocket; Ljava/util/HashMap; Lorg/benews/BackgroundSocket$1;)V
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v3, v5, [Ljava/util/HashMap;
-v7, v3, v4
-v2, v3, Lorg/benews/BackgroundSocket$SocketAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, +036h
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->isRunning()Z
-v2
-v2, +02eh
-v2, 0
-v2, v0, v2
-v2, +014h
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->getLast_timestamp()J
-v2
-v2, v0, v2
-v2, +00ah
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->isConnectionError()Z
-v2
-v2, +00ah
-v2, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v2, Lorg/benews/BackgroundSocket$SocketAsyncTask;->noData()Z
-v2
-v2, +00eh
-v2, "BackgroundSocket"
-v3, " (runUntilStop): No new news waiting ..."
-v2, v3, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v2, 60
-v2, Lorg/benews/BackgroundSocket;->Sleep(I)V
-v5, Lorg/benews/BackgroundSocket;->Sleep(I)V
--71h
-v4
-v2
--5bh
-
-// BackgroundSocket.self : NOT-OBFUSCATED
-v1, Lorg/benews/BackgroundSocket;
-v1
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v0, +009h
-v0, Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;-><init>()V
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v0, Lorg/benews/BackgroundSocket;->singleton Lorg/benews/BackgroundSocket;
-v1
-v0
-v0
-v1
-v0
-
-// BackgroundSocket.Start : NOT-OBFUSCATED
-v0, 1
-v1, Lorg/benews/BackgroundSocket;->serviceRunning Z
-v1, v0, +004h
-v0, 0
-v0
-v1, Ljava/lang/Thread;
-v1, v2, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-v1, v2, Lorg/benews/BackgroundSocket;->coreThread Ljava/lang/Thread;
-v1, 1
-v2, v1, Lorg/benews/BackgroundSocket;->setRun(Z)V
-v1, v2, Lorg/benews/BackgroundSocket;->coreThread Ljava/lang/Thread;
-v1, Ljava/lang/Thread;->start()V
-v0, Lorg/benews/BackgroundSocket;->serviceRunning Z
--13h
-v1
--4h
-
-// BackgroundSocket.getDumpFolder : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->dumpFolder Ljava/lang/String;
-v0
-
-// BackgroundSocket.getImei : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->imei Ljava/lang/String;
-v0
-
-// BackgroundSocket.getList : NOT-OBFUSCATED
-v6
-v3, v6, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v3, +02ah
-v3, Ljava/io/File;
-v6, Lorg/benews/BackgroundSocket;->getSerialFile()Ljava/lang/String;
-v4
-v3, v4, Ljava/io/File;-><init>(Ljava/lang/String;)V
-v3, Ljava/io/File;->exists()Z
-v3
-v3, +01bh
-v1, Ljava/io/FileInputStream;
-v6, Lorg/benews/BackgroundSocket;->getSerialFile()Ljava/lang/String;
-v3
-v1, v3, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-v2, Ljava/io/ObjectInputStream;
-v2, v1, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
-v2, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
-v3
-v3, Ljava/util/ArrayList;
-v3, v6, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v2, Ljava/io/ObjectInputStream;->close()V
-v3, v6, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v3, +010h
-v3, "BackgroundSocket"
-v4, " (getList) initializing list"
-v3, v4, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v3, Ljava/util/ArrayList;
-v3, Ljava/util/ArrayList;-><init>()V
-v3, v6, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v3, Ljava/io/File;
-v6, Lorg/benews/BackgroundSocket;->getSerialFileTs()Ljava/lang/String;
-v4
-v3, v4, Ljava/io/File;-><init>(Ljava/lang/String;)V
-v3, Ljava/io/File;->exists()Z
-v3
-v3, +01fh
-v1, Ljava/io/FileInputStream;
-v6, Lorg/benews/BackgroundSocket;->getSerialFileTs()Ljava/lang/String;
-v3
-v1, v3, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-v2, Ljava/io/ObjectInputStream;
-v2, v1, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
-v2, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
-v3
-v3, Ljava/lang/Long;
-v3, Ljava/lang/Long;->longValue()J
-v3
-v3, v6, Lorg/benews/BackgroundSocket;->last_timestamp J
-v2, Ljava/io/ObjectInputStream;->close()V
-v3, v6, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v6
-v3
-v0
-v3, "BackgroundSocket"
-v4, Ljava/lang/StringBuilder;
-v4, Ljava/lang/StringBuilder;-><init>()V
-v5, " (getList):"
-v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v4
-v4, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v4
-v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v4
-v3, v4, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v0, Ljava/lang/Exception;->printStackTrace()V
--5eh
-v3
-v6
-v3
-v0
-v3, "BackgroundSocket"
-v4, Ljava/lang/StringBuilder;
-v4, Ljava/lang/StringBuilder;-><init>()V
-v5, " (getList Ts):"
-v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v4
-v4, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v4
-v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v4
-v3, v4, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v0, Ljava/lang/Exception;->printStackTrace()V
--40h
-
-// BackgroundSocket.getSerialFile : NOT-OBFUSCATED
-v0, Ljava/lang/StringBuilder;
-v0, Ljava/lang/StringBuilder;-><init>()V
-v1, v2, Lorg/benews/BackgroundSocket;->serializeFolder Ljava/io/File;
-v1, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-v1
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v1, "/"
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v1, ".news"
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v0
-v0
-
-// BackgroundSocket.getSerialFileTs : NOT-OBFUSCATED
-v0, Ljava/lang/StringBuilder;
-v0, Ljava/lang/StringBuilder;-><init>()V
-v1, v2, Lorg/benews/BackgroundSocket;->serializeFolder Ljava/io/File;
-v1, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-v1
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v1, "/"
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v1, ".ts"
-v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v0
-v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v0
-v0
-
-// BackgroundSocket.isRunning : NOT-OBFUSCATED
-v0, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v0, +004h
-v0, 0
-v0
-v0, Lorg/benews/BackgroundSocket;->runningTask Lorg/benews/BackgroundSocket$SocketAsyncTask;
-v0, Lorg/benews/BackgroundSocket$SocketAsyncTask;->isRunning()Z
-v0
--7h
-
-// BackgroundSocket.isThreadStarted : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->coreThread Ljava/lang/Thread;
-v0, +00ch
-v0, v1, Lorg/benews/BackgroundSocket;->coreThread Ljava/lang/Thread;
-v0, Ljava/lang/Thread;->isAlive()Z
-v0
-v0, +004h
-v0, 1
-v0
-v0, 0
--2h
-
-// BackgroundSocket.reset_news : NOT-OBFUSCATED
-v4
+v1, v9, 3
+v1, v1, 7168
+v5, v1, 384
 v1, 0
-v1, v4, Lorg/benews/BackgroundSocket;->last_timestamp J
-v1, v4, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v1, Ljava/util/ArrayList;->clear()V
-v4, Lorg/benews/BackgroundSocket;->serialise()V
-v4, Lorg/benews/BackgroundSocket;->updateListeners()V
-v1, 1
-v1, Lorg/benews/BackgroundSocket;->Sleep(I)V
-v1, "BackgroundSocket"
-v2, " (reset_news):Done"
-v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v1, 0
-v1, v4, Lorg/benews/BackgroundSocket;->noData Z
-v1, v4, Lorg/benews/BackgroundSocket;->args_for_bkg Ljava/util/HashMap;
-v2, "date"
-v3, "0"
-v1, v2, v3, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v4
-
-v0
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, " (setStop):"
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--35h
+v6, 2
+v3, v12
+v0 ... v6, Landroidx/compose/material3/MaterialThemeKt;->MaterialTheme(Landroidx/compose/material3/ColorScheme; Landroidx/compose/material3/Shapes; Landroidx/compose/material3/Typography; Lkotlin/jvm/functions/Function2; Landroidx/compose/runtime/Composer; I I)V
+v6, v4
+Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
 v1
-v4
-v1
-
-// BackgroundSocket.run : NOT-OBFUSCATED
-v0, v3, Lorg/benews/BackgroundSocket;->args_for_bkg Ljava/util/HashMap;
-v1, "date"
-v2, "0"
-v0, v1, v2, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v0, v3, Lorg/benews/BackgroundSocket;->args_for_bkg Ljava/util/HashMap;
-v1, "checksum"
-v2, "0"
-v0, v1, v2, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
-v3, Lorg/benews/BackgroundSocket;->getList()Ljava/util/ArrayList;
-v3, Lorg/benews/BackgroundSocket;->updateListeners()V
-v0, v3, Lorg/benews/BackgroundSocket;->args_for_bkg Ljava/util/HashMap;
-v3, v0, Lorg/benews/BackgroundSocket;->runUntilStop(Ljava/util/HashMap;)Z
-v0, 2
-v0, Lorg/benews/BackgroundSocket;->Sleep(I)V
--9h
-
-// BackgroundSocket.saveStauts : NOT-OBFUSCATED
-v4
-v4, Lorg/benews/BackgroundSocket;->serialise_list()V
-v4
-
-v0
-v1, "BackgroundSocket"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, " (saveStauts):"
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--1bh
-v1
-v4
-v1
-
-// BackgroundSocket.serialise : NOT-OBFUSCATED
-v1
-v1, Lorg/benews/BackgroundSocket;->serialise_list()V
-v1, Lorg/benews/BackgroundSocket;->serialise_ts()V
-v1
-
-v0
-v1
-v0
-
-// BackgroundSocket.serialise_list : NOT-OBFUSCATED
-v3
-v0, Ljava/io/FileOutputStream;
-v3, Lorg/benews/BackgroundSocket;->getSerialFile()Ljava/lang/String;
-v2
-v0, v2, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-v1, Ljava/io/ObjectOutputStream;
-v1, v0, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
-v2, v3, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v2, Ljava/util/ArrayList;->isEmpty()Z
-v2
-v2, +018h
-v0, Ljava/io/FileOutputStream;
-v3, Lorg/benews/BackgroundSocket;->getSerialFile()Ljava/lang/String;
-v2
-v0, v2, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-v1, Ljava/io/ObjectOutputStream;
-v1, v0, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
-v2, v3, Lorg/benews/BackgroundSocket;->list Ljava/util/ArrayList;
-v1, v2, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
-v1, Ljava/io/ObjectOutputStream;->close()V
-v3
-
-v2
-v3
-v2
-
-// BackgroundSocket.serialise_ts : NOT-OBFUSCATED
-v5
-v0, Ljava/io/FileOutputStream;
-v5, Lorg/benews/BackgroundSocket;->getSerialFileTs()Ljava/lang/String;
-v2
-v0, v2, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-v1, Ljava/io/ObjectOutputStream;
-v1, v0, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
-v2, Ljava/lang/Long;
-v3, v5, Lorg/benews/BackgroundSocket;->last_timestamp J
-v2, v3, v4, Ljava/lang/Long;-><init>(J)V
-v1, v2, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
-v1, Ljava/io/ObjectOutputStream;->close()V
-v5
-
-v2
-v5
-v2
-
-// BackgroundSocket.setAssets : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->assets Landroid/content/res/AssetManager;
-
-// BackgroundSocket.setDumpFolder : NOT-OBFUSCATED
-v0, Ljava/lang/String;
-v0, v2, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-v0, v1, Lorg/benews/BackgroundSocket;->dumpFolder Ljava/lang/String;
-
-// BackgroundSocket.setImei : NOT-OBFUSCATED
-v0, Ljava/lang/String;
-v0, v2, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-v0, v1, Lorg/benews/BackgroundSocket;->imei Ljava/lang/String;
-
-// BackgroundSocket.setOnNewsUpdateListener : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BackgroundSocket;->listeners Ljava/util/ArrayList;
-v0, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-// BackgroundSocket.setRun : NOT-OBFUSCATED
-v3, +013h
-v0, v2, Lorg/benews/BackgroundSocket;->socket Ljava/net/Socket;
-v0, +00fh
-v0, Ljava/lang/Thread;
-v1, Lorg/benews/BackgroundSocket$1;
-v1, v2, Lorg/benews/BackgroundSocket$1;-><init>(Lorg/benews/BackgroundSocket;)V
-v0, v1, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-v0, Ljava/lang/Thread;->start()V
-v3, v2, Lorg/benews/BackgroundSocket;->run Z
-
-// BackgroundSocket.setSerializeFolder : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BackgroundSocket;->serializeFolder Ljava/io/File;
-
-// BackgroundSocket.updateListeners : NOT-OBFUSCATED
-v2, v3, Lorg/benews/BackgroundSocket;->listeners Ljava/util/ArrayList;
-v2, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-v0
-v0, Ljava/util/Iterator;->hasNext()Z
-v2
-v2, +00ch
-v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
-v1
-v1, Lorg/benews/BackgroundSocket$NewsUpdateListener;
-v1, Lorg/benews/BackgroundSocket$NewsUpdateListener;->onNewsUpdate()V
--fh
-
-// BeNews$1.<init> : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v2, v0, Lorg/benews/BeNews$1;->val$b Landroid/widget/Button;
-v0, Ljava/lang/Object;-><init>()V
-
-// BeNews$1.run : NOT-OBFUSCATED
-v4
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v2, Lorg/benews/BeNews;->isToUpdate()Z
-v2
-v2, +04bh
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v2, v2, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v2, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
-Lorg/benews/BackgroundSocket;->self()Lorg/benews/BackgroundSocket;
-v1
-v2, v4, Lorg/benews/BeNews$1;->val$b Landroid/widget/Button;
-v2, Landroid/widget/Button;->isEnabled()Z
-v2
-v2, +02bh
-v2, 1
-v1, v2, Lorg/benews/BackgroundSocket;->setRun(Z)V
-v0, 100
-v1, Lorg/benews/BackgroundSocket;->isRunning()Z
-v2
-v2, +013h
-v0, +011h
-v0, v0, -20
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v2, v0, Lorg/benews/BeNews;->setProgressBar(I)V
-v2, 1
-v2, Lorg/benews/BackgroundSocket;->Sleep(I)V
--13h
-v2
-v4
-v2
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v3, 0
-v2, v3, Lorg/benews/BeNews;->setProgressBar(I)V
-v2, v4, Lorg/benews/BeNews$1;->val$b Landroid/widget/Button;
-v3, 1
-v2, v3, Landroid/widget/Button;->setEnabled(Z)V
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v2, v2, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v2, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
-v2, v4, Lorg/benews/BeNews$1;->this$0 Lorg/benews/BeNews;
-v3, 0
-v2, v3, Lorg/benews/BeNews;->setToUpdate(Z)V
-v4
-
-// BeNews$2.<init> : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BeNews$2;->this$0 Lorg/benews/BeNews;
-v0, Landroid/content/BroadcastReceiver;-><init>()V
-
-// BeNews$2.onReceive : NOT-OBFUSCATED
-v1, "message"
-v6, v1, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-v0
-v1, "receiver"
-v2, Ljava/lang/StringBuilder;
-v2, Ljava/lang/StringBuilder;-><init>()V
-v3, "Got message: "
-v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v2
-v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v2
-v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v1, v4, Lorg/benews/BeNews$2;->this$0 Lorg/benews/BeNews;
-v1, Lorg/benews/BeNews;->finishOnStart()V
-
-// BeNews$3.<init> : NOT-OBFUSCATED
-v1, v0, Lorg/benews/BeNews$3;->this$0 Lorg/benews/BeNews;
-v2, v0, Lorg/benews/BeNews$3;->val$sucker Lorg/benews/BackgroundSocket;
-v0, Ljava/lang/Object;-><init>()V
-
-// BeNews$3.run : NOT-OBFUSCATED
-v0, 0
-v1, v2, Lorg/benews/BeNews$3;->this$0 Lorg/benews/BeNews;
-v1, v0, Lorg/benews/BeNews;->setProgressBar(I)V
-v1, v2, Lorg/benews/BeNews$3;->val$sucker Lorg/benews/BackgroundSocket;
-v1, Lorg/benews/BackgroundSocket;->isRunning()Z
-v1
-v1, +012h
-v1, 1
-v1, Lorg/benews/BackgroundSocket;->Sleep(I)V
-v0, v0, 1
-v1, 100
-v0, v1, -010h
-v1, v2, Lorg/benews/BeNews$3;->this$0 Lorg/benews/BeNews;
-v1, v0, Lorg/benews/BeNews;->setProgressBar(I)V
--17h
-v1, v2, Lorg/benews/BeNews$3;->val$sucker Lorg/benews/BackgroundSocket;
-v1, Lorg/benews/BackgroundSocket;->reset_news()V
-
-// BeNewsArrayAdapter$ViewHolderItem.<init> : NOT-OBFUSCATED
-v3, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->this$0 Lorg/benews/BeNewsArrayAdapter;
-v2, Ljava/lang/Object;-><init>()V
-v4, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v1, 2131165227
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/TextView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->title Landroid/widget/TextView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v1, 2131165260
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/TextView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->secondLine Landroid/widget/TextView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v1, 2131165226
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/ImageView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->imageView Landroid/widget/ImageView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v1, 2131165254
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/TextView;
-v0, v2, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->date Landroid/widget/TextView;
-
-// BeNewsArrayAdapter.<clinit> : NOT-OBFUSCATED
-v0, Ljava/text/SimpleDateFormat;
-v1, "dd/MM/yyyy hh:mm"
-v0, v1, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-v0, Lorg/benews/BeNewsArrayAdapter;->dateFormatter Ljava/text/SimpleDateFormat;
-
-// BeNewsArrayAdapter.<init> : NOT-OBFUSCATED
-v0, 2130903069
-v1, v2, v0, v3, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context; I Ljava/util/List;)V
-v3, v1, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v2, v1, Lorg/benews/BeNewsArrayAdapter;->context Landroid/content/Context;
-
-// BeNewsArrayAdapter.getCachedView : NOT-OBFUSCATED
-v2, 0
-v0, 0
-v6, +000001eh
-v0, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;
-v1, 2130903069
-v4, v1, v5, v2, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
-v1
-v0, v3, v1, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;-><init>(Lorg/benews/BeNewsArrayAdapter; Landroid/view/View;)V
-v0
-v0, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;
-v1, 2130903068
-v4, v1, v5, v2, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
-v1
-v0, v3, v1, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;-><init>(Lorg/benews/BeNewsArrayAdapter; Landroid/view/View;)V
--dh
-
-0
-
-// BeNewsArrayAdapter.getView : NOT-OBFUSCATED
-v12, v16, 2
-v12, +0c8h
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->context Landroid/content/Context;
-v13, "layout_inflater"
-v12, v13, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-v12
-v12, Landroid/view/LayoutInflater;
-v13, 1
-v0, v18
-v15, v12, v0, v13, Lorg/benews/BeNewsArrayAdapter;->getCachedView(Landroid/view/LayoutInflater; Landroid/view/ViewGroup; I)Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;
-v11
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v12, +0b0h
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v0, v16
-v12, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+v1, +005h
+Landroidx/compose/runtime/ComposerKt;->traceEventEnd()V
+v1, v7
+v2, v8
+v6, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
 v7
-v7, Ljava/util/HashMap;
-v12, "path"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v9
-v9, Ljava/lang/String;
-v12, "type"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v10
-v10, Ljava/lang/String;
-v9, +094h
-v10, +092h
-v12, "img"
-v10, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-v12
-v12, +036h
-v5, Ljava/io/File;
-v5, v9, Ljava/io/File;-><init>(Ljava/lang/String;)V
-v5, Ljava/io/File;->exists()Z
-v12
-v12, +09fh
-v5, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-v12
-v12, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
-v8
-v8, +021h
-v12, Lorg/benews/BitmapHelper;->img_preview_limit_high I
-v12, +087h
-v6, 100
-v8, Landroid/graphics/Bitmap;->getHeight()I
-v12
-v12, v6, +010h
-v12, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v13, 0
-v12, v12, v13
-v12, +07ch
-v12, 1111490560
-v12, v12
-v8, v12, Lorg/benews/BitmapHelper;->scaleToFitHeight(Landroid/graphics/Bitmap; I)Landroid/graphics/Bitmap;
-v8
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->imageView Landroid/widget/ImageView;
-v12, v8, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-v12, "title"
-v7, v12, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v12
-v12, +00fh
-v13, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->title Landroid/widget/TextView;
-v12, "title"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v12
-v12, Ljava/lang/CharSequence;
-v13, v12, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v12, "headline"
-v7, v12, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v12
-v12, +00fh
-v13, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->secondLine Landroid/widget/TextView;
-v12, "headline"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v12
-v12, Ljava/lang/CharSequence;
-v13, v12, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v12, "date"
-v7, v12, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-v12
-v12, +024h
-v1, Ljava/util/Date;
-v1, Ljava/util/Date;-><init>()V
-v12, "date"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v12
-v12, Ljava/lang/String;
-v12, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-v3
-v12, 1000
-v12, v3
-v1, v12, v13, Ljava/util/Date;->setTime(J)V
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->date Landroid/widget/TextView;
-v13, Lorg/benews/BeNewsArrayAdapter;->dateFormatter Ljava/text/SimpleDateFormat;
-v13, v1, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-v13
-v12, v13, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
-v12
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->context Landroid/content/Context;
-v13, "layout_inflater"
-v12, v13, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-v12
-v12, Landroid/view/LayoutInflater;
-v13, 0
-v0, v18
-v15, v12, v0, v13, Lorg/benews/BeNewsArrayAdapter;->getCachedView(Landroid/view/LayoutInflater; Landroid/view/ViewGroup; I)Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;
-v11
--0c6h
-v6, Lorg/benews/BitmapHelper;->img_preview_limit_high I
--085h
-v12, 1111490560
-v13, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v12, v13
--7dh
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v12, v7, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-v12
-v12, +00ah
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v12, v7, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-v15, Lorg/benews/BeNewsArrayAdapter;->notifyDataSetChanged()V
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
--30h
-v2
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v12, v7, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-v12
-v12, +00ah
-v12, v15, Lorg/benews/BeNewsArrayAdapter;->list Ljava/util/ArrayList;
-v12, v7, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-v15, Lorg/benews/BeNewsArrayAdapter;->notifyDataSetChanged()V
-v12, "BeNewsArrayAdapter"
-v13, Ljava/lang/StringBuilder;
-v13, Ljava/lang/StringBuilder;-><init>()V
-v14, " (getView):"
-v13, v14, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v13
-v13, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v13
-v13, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v13
-v12, v13, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->view Landroid/view/View;
--5ch
-v2
-v13, "BeNewsArrayAdapter"
-v12, Ljava/lang/StringBuilder;
-v12, Ljava/lang/StringBuilder;-><init>()V
-v14, "Invalid date "
-v12, v14, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v14
-v12, "date"
-v7, v12, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v12
-v12, Ljava/lang/String;
-v14, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v12
-v12, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v12
-v13, v12, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v12, v11, Lorg/benews/BeNewsArrayAdapter$ViewHolderItem;->date Landroid/widget/TextView;
-v13, "--/--/----"
-v12, v13, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
--087h
+v7, +00dh
+v0, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;
+v3, v12
+v4, v14
+v5, v15
+v0 ... v5, Lcom/ryan/nativecall/ui/theme/ThemeKt$$ExternalSyntheticLambda0;-><init>(Z Z Lkotlin/jvm/functions/Function2; I I)V
+v7, v0, Landroidx/compose/runtime/ScopeUpdateScope;->updateScope(Lkotlin/jvm/functions/Function2;)V
 
-// BitmapHelper.<clinit> : NOT-OBFUSCATED
-v1, 0
-v0, 0
-v1, Lorg/benews/BitmapHelper;->img_preview_limit_high I
-v1, Lorg/benews/BitmapHelper;->img_view_limit_high I
-v0, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v0, Lorg/benews/BitmapHelper;->density F
-
-// BitmapHelper.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
-
-// BitmapHelper.init : NOT-OBFUSCATED
-v2, Lorg/benews/BitmapHelper;->density F
-v0, Lorg/benews/BitmapHelper;->img_preview_limit_high I
-v0, +017h
-v0, 1056964608
-v0, v2
-v0, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v0, 1112014848
-v1, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v0, v1
-v0, v0
-v0, Lorg/benews/BitmapHelper;->img_preview_limit_high I
-v0, 1125515264
-v1, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v0, v1
-v0, v0
-v0, Lorg/benews/BitmapHelper;->img_view_limit_high I
-
-// BitmapHelper.scaleToFill : NOT-OBFUSCATED
-v3, v8
-v6, Landroid/graphics/Bitmap;->getWidth()I
-v4
-v4, v4
-v0, v3, v4
-v3, v7
-v6, Landroid/graphics/Bitmap;->getWidth()I
-v4
-v4, v4
-v2, v3, v4
-v3, v0, v2
-v3, +017h
-v1, v2
-v6, Landroid/graphics/Bitmap;->getWidth()I
-v3
-v3, v3
-v3, v1
-v3, v3
-v6, Landroid/graphics/Bitmap;->getHeight()I
-v4
-v4, v4
-v4, v1
-v4, v4
-v5, 0
-v6, v3, v4, v5, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap; I I Z)Landroid/graphics/Bitmap;
-v3
-v3
-v1, v0
--15h
-
-// BitmapHelper.scaleToFitHeight : NOT-OBFUSCATED
-v1, v4
-v3, Landroid/graphics/Bitmap;->getHeight()I
-v2
-v2, v2
-v0, v1, v2
-v3, Landroid/graphics/Bitmap;->getWidth()I
-v1
-v1, v1
-v1, v0
-v1, v1
-v2, 0
-v3, v1, v4, v2, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap; I I Z)Landroid/graphics/Bitmap;
-v1
-v1
-
-// BitmapHelper.scaleToFitWidth : NOT-OBFUSCATED
-v1, v4
-v3, Landroid/graphics/Bitmap;->getWidth()I
-v2
-v2, v2
-v0, v1, v2
-v3, Landroid/graphics/Bitmap;->getHeight()I
-v1
-v1, v1
-v1, v0
-v1, v1
-v2, 0
-v3, v4, v1, v2, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap; I I Z)Landroid/graphics/Bitmap;
-v1
-v1
-
-// BitmapHelper.strechToFill : NOT-OBFUSCATED
-v2, v7
-v5, Landroid/graphics/Bitmap;->getHeight()I
-v3
-v3, v3
-v0, v2, v3
-v2, v6
-v5, Landroid/graphics/Bitmap;->getWidth()I
-v3
-v3, v3
-v1, v2, v3
-v5, Landroid/graphics/Bitmap;->getWidth()I
-v2
-v2, v2
-v2, v1
-v2, v2
-v5, Landroid/graphics/Bitmap;->getHeight()I
-v3
-v3, v3
-v3, v0
-v3, v3
-v4, 0
-v5, v2, v3, v4, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap; I I Z)Landroid/graphics/Bitmap;
-v2
-v2
-
-// BootManager.<init> : NOT-OBFUSCATED
-v0, Landroid/content/BroadcastReceiver;-><init>()V
-
-// BootManager.onReceive : NOT-OBFUSCATED
-v0, Landroid/content/Intent;
-v1, Lorg/benews/PullIntentService;
-v0, v3, v1, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
-v3, v0, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-// BsonBridge.<clinit> : NOT-OBFUSCATED
-v0, "bson"
-v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-
-// BsonBridge.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
-
-// BsonBridge.getTokenBson : NOT-OBFUSCATED
-v0, "BsonBridge"
-v1, "getToken called
-"
-v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v2, v3, v4, v5, Lorg/benews/BsonBridge;->getToken(Ljava/lang/String; J Ljava/lang/String;)[B
-v0
-v0
-
-// BsonBridge.serializeBson : NOT-OBFUSCATED
-v0, "BsonBridge"
-v1, "serialize called
-"
-v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v2, v3, Lorg/benews/BsonBridge;->serialize(Ljava/lang/String; Ljava/nio/ByteBuffer;)Ljava/util/HashMap;
-v0
-v0
-
-// BuildConfig.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
-
-// PullIntentService.<init> : NOT-OBFUSCATED
-v0, Landroid/app/Service;-><init>()V
-
-// PullIntentService.onBind : NOT-OBFUSCATED
-v0, 0
-v0
-
-// PullIntentService.onCreate : NOT-OBFUSCATED
-v10, Landroid/app/Service;->onCreate()V
-v3, Landroid/content/Intent;
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
-v8
-v9, Lorg/benews/PullIntentService;
-v3, v8, v9, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
-v8
-v8, v3, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
-v8
-v9, "android.permission.INTERNET"
-v8, v9, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
+// ThemeKt.NativeCallTheme$lambda$0 : NOT-OBFUSCATED
+v0, v10, 1
+v0, Landroidx/compose/runtime/RecomposeScopeImplKt;->updateChangedFlags(I)I
 v5
-v5, +009h
-v8, "PullIntentService"
-v9, "Permission INTERNET not acquired"
-v8, v9, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
+v1, v7
+v2, v8
+v3, v9
+v6, v11
+v4, v12
+v1 ... v6, Lcom/ryan/nativecall/ui/theme/ThemeKt;->NativeCallTheme(Z Z Lkotlin/jvm/functions/Function2; Landroidx/compose/runtime/Composer; I I)V
+v7, Lkotlin/Unit;->INSTANCE Lkotlin/Unit;
+v7
+
+// TypeKt.<clinit> : NOT-OBFUSCATED
+v0, Landroidx/compose/material3/Typography;
+v1, Landroidx/compose/ui/text/font/FontFamily;->Companion Landroidx/compose/ui/text/font/FontFamily$Companion;
+v1, Landroidx/compose/ui/text/font/FontFamily$Companion;->getDefault()Landroidx/compose/ui/text/font/SystemFontFamily;
+v1
+v2, Landroidx/compose/ui/text/font/FontWeight;->Companion Landroidx/compose/ui/text/font/FontWeight$Companion;
+v2, Landroidx/compose/ui/text/font/FontWeight$Companion;->getNormal()Landroidx/compose/ui/text/font/FontWeight;
 v8
-v9, "android.permission.READ_PHONE_STATE""
-v8, v9, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
-v5
-v5, +009h
-v8, "PullIntentService"
-v9, "Permission READ_PHONE_STATE not acquired"
-v8, v9, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
-v8
-v9, "android.permission.WRITE_EXTERNAL_STORAGE"
-v8, v9, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
-v5
-v5, +009h
-v8, "PullIntentService"
-v9, "Permission WRITE_EXTERNAL_STORAGE not acquired"
-v8, v9, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v10, Lorg/benews/PullIntentService;->getPackageManager()Landroid/content/pm/PackageManager;
-v2
-v10, Lorg/benews/PullIntentService;->getPackageName()Ljava/lang/String;
+v2, 16
+v2, Landroidx/compose/ui/unit/TextUnitKt;->getSp(I)J
 v6
+v2, 24
+v2, Landroidx/compose/ui/unit/TextUnitKt;->getSp(I)J
+v25
+v2, 4602678819172646912
+v2, v3, Landroidx/compose/ui/unit/TextUnitKt;->getSp(D)J
+v13
+v3, Landroidx/compose/ui/text/TextStyle;
+
+
+
+v11, v1
+v11, Landroidx/compose/ui/text/font/FontFamily;
+
+
+
+
+v33, 16645977
+v34, 0
+v4, 0
+v9, 0
+v10, 0
+v12, 0
+v15, 0
+v16, 0
+v17, 0
+v18, 0
+v20, 0
+v21, 0
+v22, 0
+v23, 0
+v24, 0
+v27, 0
+v28, 0
+v29, 0
+v30, 0
+v31, 0
+v32, 0
+v3 ... v34, Landroidx/compose/ui/text/TextStyle;-><init>(J J Landroidx/compose/ui/text/font/FontWeight; Landroidx/compose/ui/text/font/FontStyle; Landroidx/compose/ui/text/font/FontSynthesis; Landroidx/compose/ui/text/font/FontFamily; Ljava/lang/String; J Landroidx/compose/ui/text/style/BaselineShift; Landroidx/compose/ui/text/style/TextGeometricTransform; Landroidx/compose/ui/text/intl/LocaleList; J Landroidx/compose/ui/text/style/TextDecoration; Landroidx/compose/ui/graphics/Shadow; Landroidx/compose/ui/graphics/drawscope/DrawStyle; I I J Landroidx/compose/ui/text/style/TextIndent; Landroidx/compose/ui/text/PlatformTextStyle; Landroidx/compose/ui/text/style/LineHeightStyle; I I Landroidx/compose/ui/text/style/TextMotion; I Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+v16, 32255
+v1, 0
+v2, 0
+v10, v3
+v3, 0
+v4, 0
+v5, 0
+v6, 0
+v7, 0
 v8, 0
-v2, v6, v8, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String; I)Landroid/content/pm/PackageInfo;
-v4
-v8, v4, Landroid/content/pm/PackageInfo;->applicationInfo Landroid/content/pm/ApplicationInfo;
-v8, v8, Landroid/content/pm/ApplicationInfo;->dataDir Ljava/lang/String;
-v8, v10, Lorg/benews/PullIntentService;->saveFolder Ljava/lang/String;
-v8, "phone"
-v10, v8, Lorg/benews/PullIntentService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-v7
-v7, Landroid/telephony/TelephonyManager;
-v7, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
-v8
-v8, v10, Lorg/benews/PullIntentService;->imei Ljava/lang/String;
-v10, Lorg/benews/BackgroundSocket;->newCore(Lorg/benews/PullIntentService;)Lorg/benews/BackgroundSocket;
-v8
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v9, v10, Lorg/benews/PullIntentService;->saveFolder Ljava/lang/String;
-v8, v9, Lorg/benews/BackgroundSocket;->setDumpFolder(Ljava/lang/String;)V
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v10, Lorg/benews/PullIntentService;->getApplicationContext()Landroid/content/Context;
-v9
-v9, Landroid/content/Context;->getFilesDir()Ljava/io/File;
-v9
-v8, v9, Lorg/benews/BackgroundSocket;->setSerializeFolder(Ljava/io/File;)V
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v9, v10, Lorg/benews/PullIntentService;->imei Ljava/lang/String;
-v8, v9, Lorg/benews/BackgroundSocket;->setImei(Ljava/lang/String;)V
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v10, Lorg/benews/PullIntentService;->getResources()Landroid/content/res/Resources;
-v9
-v9, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
-v9
-v8, v9, Lorg/benews/BackgroundSocket;->setAssets(Landroid/content/res/AssetManager;)V
-v8, v10, Lorg/benews/PullIntentService;->core Lorg/benews/BackgroundSocket;
-v8, Lorg/benews/BackgroundSocket;->Start()Z
-v1, Landroid/content/Intent;
-v8, "upAndRunning"
-v1, v8, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-v8, "message"
-v9, "data"
-v1, v8, v9, Landroid/content/Intent;->putExtra(Ljava/lang/String; Ljava/lang/String;)Landroid/content/Intent;
-v10, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
-v8
-v8, v1, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
+v11, 0
+v13, 0
+v14, 0
+v0 ... v17, Landroidx/compose/material3/Typography;-><init>(Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; Landroidx/compose/ui/text/TextStyle; I Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+v0, Lcom/ryan/nativecall/ui/theme/TypeKt;->Typography Landroidx/compose/material3/Typography;
 
-v0
-v8, "PullIntentService"
-v9, "Error Package name not found "
-v8, v9, v0, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
--51h
-
-// PullIntentService.onDestroy : NOT-OBFUSCATED
-v0, Landroid/app/Service;->onDestroy()V
-
-// PullIntentService.onStartCommand : NOT-OBFUSCATED
-v1, v2, v3, v4, Landroid/app/Service;->onStartCommand(Landroid/content/Intent; I I)I
-v0, 1
+// TypeKt.getTypography : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/ui/theme/TypeKt;->Typography Landroidx/compose/material3/Typography;
 v0
 
-// R$anim.<init> : NOT-OBFUSCATED
+// ActivityMainBinding.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
+v1, v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->rootView Landroid/widget/LinearLayout;
+v2, v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->buttonFetchUrl Landroid/widget/Button;
+v3, v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->textViewUrl Landroid/widget/TextView;
 
-// R$attr.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
+// ActivityMainBinding.bind : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/R$id;->buttonFetchUrl I
+v5, v0, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View; I)Landroid/view/View;
+v1
+v1, Landroid/widget/Button;
+v1, +016h
+v0, Lcom/ryan/nativecall/R$id;->textViewUrl I
+v5, v0, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View; I)Landroid/view/View;
+v2
+v2, Landroid/widget/TextView;
+v2, +00bh
+v3, Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v4, v5
+v4, Landroid/widget/LinearLayout;
+v3, v4, v1, v2, Lcom/ryan/nativecall/databinding/ActivityMainBinding;-><init>(Landroid/widget/LinearLayout; Landroid/widget/Button; Landroid/widget/TextView;)V
+v3
++2h
 
-// R$bool.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
+v5, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+v1
+v1, v0, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+v1
+v2, Ljava/lang/NullPointerException;
+v3, "Missing required view with ID: "
+v3, v1, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+v3
+v2, v3, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+v2
+
+// ActivityMainBinding.inflate : NOT-OBFUSCATED
+v0, 0
+v1, 0
+v2, v0, v1, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater; Landroid/view/ViewGroup; Z)Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v0
+v0
+
+// ActivityMainBinding.inflate : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/R$layout;->activity_main I
+v1, 0
+v2, v0, v3, v1, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
+v0
+v4, +005h
+v3, v0, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->bind(Landroid/view/View;)Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v1
+v1
+
+// ActivityMainBinding.getRoot : NOT-OBFUSCATED
+v1, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->getRoot()Landroid/widget/LinearLayout;
+v0
+v0
+
+// ActivityMainBinding.getRoot : NOT-OBFUSCATED
+v0, v1, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->rootView Landroid/widget/LinearLayout;
+v0
 
 // R$color.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
-
-// R$dimen.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
 // R$drawable.<init> : NOT-OBFUSCATED
@@ -1673,13 +452,10 @@ v0, Ljava/lang/Object;-><init>()V
 // R$id.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// R$integer.<init> : NOT-OBFUSCATED
-v0, Ljava/lang/Object;-><init>()V
-
 // R$layout.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// R$menu.<init> : NOT-OBFUSCATED
+// R$mipmap.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
 // R$string.<init> : NOT-OBFUSCATED
@@ -1688,746 +464,222 @@ v0, Ljava/lang/Object;-><init>()V
 // R$style.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// R$styleable.<clinit> : NOT-OBFUSCATED
-v6, 6
-v5, 5
-v4, 3
-v3, 1
-v2, 0
-v0, 19
-v0, v0, [I
-v0, +000007bh
-v0, Lorg/benews/R$styleable;->ActionBar [I
-v0, v3, [I
-v1, 16842931
-v1, v0, v2
-v0, Lorg/benews/R$styleable;->ActionBarLayout [I
-v0, 7
-v0, v0, [I
-v0, +0000094h
-v0, Lorg/benews/R$styleable;->ActionBarWindow [I
-v0, v3, [I
-v1, 16843071
-v1, v0, v2
-v0, Lorg/benews/R$styleable;->ActionMenuItemView [I
-v0, v2, [I
-v0, Lorg/benews/R$styleable;->ActionMenuView [I
-v0, v5, [I
-v0, +0000092h
-v0, Lorg/benews/R$styleable;->ActionMode [I
-v0, 2
-v0, v0, [I
-v0, +0000098h
-v0, Lorg/benews/R$styleable;->ActivityChooserView [I
-v0, v3, [I
-v1, 2130772057
-v1, v0, v2
-v0, Lorg/benews/R$styleable;->CompatTextView [I
-v0, v4, [I
-v0, +0000090h
-v0, Lorg/benews/R$styleable;->LinearLayoutICS [I
-v0, v6, [I
-v0, +0000093h
-v0, Lorg/benews/R$styleable;->MenuGroup [I
-v0, 17
-v0, v0, [I
-v0, +000009ah
-v0, Lorg/benews/R$styleable;->MenuItem [I
-v0, 8
-v0, v0, [I
-v0, +00000b7h
-v0, Lorg/benews/R$styleable;->MenuView [I
-v0, v5, [I
-v0, +00000c4h
-v0, Lorg/benews/R$styleable;->SearchView [I
-v0, 10
-v0, v0, [I
-v0, +00000c9h
-v0, Lorg/benews/R$styleable;->Spinner [I
-v0, v6, [I
-v0, +00000dah
-v0, Lorg/benews/R$styleable;->Theme [I
-v0, v4, [I
-v0, +00000e3h
-v0, Lorg/benews/R$styleable;->View [I
-
-
-b' \x00\x01\x7f>\x00\x01\x7f?\x00\x01\x7f@\x00\x01\x7fA\x00\x01\x7fB\x00\x01\x7fC\x00\x01\x7fD\x00\x01\x7fE\x00\x01\x7fF\x00\x01\x7fG\x00\x01\x7fH\x00\x01\x7fI\x00\x01\x7fJ\x00\x01\x7fK\x00\x01\x7fL\x00\x01\x7fM\x00\x01\x7fN\x00\x01\x7fO\x00\x01\x7f' | \x20\x00\x01\x7f\x3e\x00\x01\x7f\x3f\x00\x01\x7f\x40\x00\x01\x7f\x41\x00\x01\x7f\x42\x00\x01\x7f\x43\x00\x01\x7f\x44\x00\x01\x7f\x45\x00\x01\x7f\x46\x00\x01\x7f\x47\x00\x01\x7f\x48\x00\x01\x7f\x49\x00\x01\x7f\x4a\x00\x01\x7f\x4b\x00\x01\x7f\x4c\x00\x01\x7f\x4d\x00\x01\x7f\x4e\x00\x01\x7f\x4f\x00\x01\x7f
-b'P\x00\x01\x7fQ\x00\x01\x7fR\x00\x01\x7fS\x00\x01\x7fT\x00\x01\x7fU\x00\x01\x7fV\x00\x01\x7f' | \x50\x00\x01\x7f\x51\x00\x01\x7f\x52\x00\x01\x7f\x53\x00\x01\x7f\x54\x00\x01\x7f\x55\x00\x01\x7f\x56\x00\x01\x7f
-b' \x00\x01\x7fB\x00\x01\x7fC\x00\x01\x7fG\x00\x01\x7fI\x00\x01\x7f' | \x20\x00\x01\x7f\x42\x00\x01\x7f\x43\x00\x01\x7f\x47\x00\x01\x7f\x49\x00\x01\x7f
-b'W\x00\x01\x7fX\x00\x01\x7f' | \x57\x00\x01\x7f\x58\x00\x01\x7f
-b'F\x00\x01\x7fZ\x00\x01\x7f[\x00\x01\x7f' | \x46\x00\x01\x7f\x5a\x00\x01\x7f\x5b\x00\x01\x7f
-b'\x0e\x00\x01\x01\xd0\x00\x01\x01\x94\x01\x01\x01\xde\x01\x01\x01\xdf\x01\x01\x01\xe0\x01\x01\x01' | \x0e\x00\x01\x01\xd0\x00\x01\x01\x94\x01\x01\x01\xde\x01\x01\x01\xdf\x01\x01\x01\xe0\x01\x01\x01
-b'\x02\x00\x01\x01\x0e\x00\x01\x01\xd0\x00\x01\x01\x06\x01\x01\x01\x94\x01\x01\x01\xde\x01\x01\x01\xdf\x01\x01\x01\xe1\x01\x01\x01\xe2\x01\x01\x01\xe3\x01\x01\x01\xe4\x01\x01\x01\xe5\x01\x01\x01o\x02\x01\x01\\\x00\x01\x7f]\x00\x01\x7f^\x00\x01\x7f_\x00\x01\x7f' | \x02\x00\x01\x01\x0e\x00\x01\x01\xd0\x00\x01\x01\x06\x01\x01\x01\x94\x01\x01\x01\xde\x01\x01\x01\xdf\x01\x01\x01\xe1\x01\x01\x01\xe2\x01\x01\x01\xe3\x01\x01\x01\xe4\x01\x01\x01\xe5\x01\x01\x01\x6f\x02\x01\x01\x5c\x00\x01\x7f\x5d\x00\x01\x7f\x5e\x00\x01\x7f\x5f\x00\x01\x7f
-b'\xae\x00\x01\x01,\x01\x01\x01-\x01\x01\x01.\x01\x01\x01/\x01\x01\x010\x01\x01\x011\x01\x01\x01\xea\x03\x01\x01' | \xae\x00\x01\x01\x2c\x01\x01\x01\x2d\x01\x01\x01\x2e\x01\x01\x01\x2f\x01\x01\x01\x30\x01\x01\x01\x31\x01\x01\x01\xea\x03\x01\x01
-b'\x1f\x01\x01\x01 \x02\x01\x01d\x02\x01\x01`\x00\x01\x7fa\x00\x01\x7f' | \x1f\x01\x01\x01\x20\x02\x01\x01\x64\x02\x01\x01\x60\x00\x01\x7f\x61\x00\x01\x7f
-b'\xaf\x00\x01\x01u\x01\x01\x01v\x01\x01\x01b\x02\x01\x01\xac\x02\x01\x01\xad\x02\x01\x01b\x00\x01\x7fc\x00\x01\x7fd\x00\x01\x7fe\x00\x01\x7f' | \xaf\x00\x01\x01\x75\x01\x01\x01\x76\x01\x01\x01\x62\x02\x01\x01\xac\x02\x01\x01\xad\x02\x01\x01\x62\x00\x01\x7f\x63\x00\x01\x7f\x64\x00\x01\x7f\x65\x00\x01\x7f
-b'f\x00\x01\x7fg\x00\x01\x7fh\x00\x01\x7fi\x00\x01\x7fj\x00\x01\x7fk\x00\x01\x7f' | \x66\x00\x01\x7f\x67\x00\x01\x7f\x68\x00\x01\x7f\x69\x00\x01\x7f\x6a\x00\x01\x7f\x6b\x00\x01\x7f
-b'\xda\x00\x01\x01l\x00\x01\x7fm\x00\x01\x7f' | \xda\x00\x01\x01\x6c\x00\x01\x7f\x6d\x00\x01\x7f
-
-// R$styleable.<init> : NOT-OBFUSCATED
+// R$xml.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
 // R.<init> : NOT-OBFUSCATED
 v0, Ljava/lang/Object;-><init>()V
 
-// BeNews.<clinit> : NOT-OBFUSCATED
-v0, 0
-v0, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
+// MainActivity$$ExternalSyntheticLambda0.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
+v1, v0, Lcom/ryan/nativecall/MainActivity$$ExternalSyntheticLambda0;->f$0 Lcom/ryan/nativecall/MainActivity;
 
-// BeNews.<init> : NOT-OBFUSCATED
-v1, Landroid/support/v4/app/FragmentActivity;-><init>()V
-v0, 0
-v0, v1, Lorg/benews/BeNews;->toUpdate Z
-v0, Lorg/benews/BeNews$2;
-v0, v1, Lorg/benews/BeNews$2;-><init>(Lorg/benews/BeNews;)V
-v0, v1, Lorg/benews/BeNews;->mMessageReceiver Landroid/content/BroadcastReceiver;
+// MainActivity$$ExternalSyntheticLambda0.onClick : NOT-OBFUSCATED
+v0, v1, Lcom/ryan/nativecall/MainActivity$$ExternalSyntheticLambda0;->f$0 Lcom/ryan/nativecall/MainActivity;
+v0, v2, Lcom/ryan/nativecall/MainActivity;->$r8$lambda$BuZPjbPzHnS5Oj-Wr4V6mwwz3fc(Lcom/ryan/nativecall/MainActivity; Landroid/view/View;)V
 
-// BeNews.getAppContext : NOT-OBFUSCATED
-v0, Lorg/benews/BeNews;->context Landroid/content/Context;
-v0
+// MainActivity$Companion.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
 
-// BeNews.finishOnStart : NOT-OBFUSCATED
-Lorg/benews/BackgroundSocket;->self()Lorg/benews/BackgroundSocket;
-v3
-v1, Lorg/benews/BeNewsFragList;
-v1, Lorg/benews/BeNewsFragList;-><init>()V
-v6, Lorg/benews/BeNews;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
-v4
-v4, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
-v2
-v4, 2131165249
-v2, v4, v1, Landroid/support/v4/app/FragmentTransaction;->replace(I Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
-v2, Landroid/support/v4/app/FragmentTransaction;->commit()I
-v4, Lorg/benews/BeNewsArrayAdapter;
-v3, Lorg/benews/BackgroundSocket;->getList()Ljava/util/ArrayList;
-v5
-v4, v6, v5, Lorg/benews/BeNewsArrayAdapter;-><init>(Landroid/content/Context; Ljava/util/ArrayList;)V
-v4, v6, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v4, v6, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v1, v4, Lorg/benews/BeNewsFragList;->setListAdapter(Landroid/widget/ListAdapter;)V
-v4, 2131165250
-v6, v4, Lorg/benews/BeNews;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/Button;
-v0, v6, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-v4, 2131165247
-v6, v4, Lorg/benews/BeNews;->findViewById(I)Landroid/view/View;
-v4
-v4, Landroid/widget/ProgressBar;
-v4, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
-v4, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
-v5, 0
-v4, v5, Landroid/widget/ProgressBar;->setProgress(I)V
-v4, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
-v5, 100
-v4, v5, Landroid/widget/ProgressBar;->setMax(I)V
-v3, v6, Lorg/benews/BackgroundSocket;->setOnNewsUpdateListener(Lorg/benews/BackgroundSocket$NewsUpdateListener;)V
-v4, 1
-v6, v4, Lorg/benews/BeNews;->setToUpdate(Z)V
+// MainActivity$Companion.<init> : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/MainActivity$Companion;-><init>()V
 
-// BeNews.isToUpdate : NOT-OBFUSCATED
-v1
-v0, v1, Lorg/benews/BeNews;->toUpdate Z
-v1
-v0
-v0
-v1
-v0
+// MainActivity.$r8$lambda$BuZPjbPzHnS5Oj-Wr4V6mwwz3fc : NOT-OBFUSCATED
+v0, v1, Lcom/ryan/nativecall/MainActivity;->onCreate$lambda$0(Lcom/ryan/nativecall/MainActivity; Landroid/view/View;)V
 
-// BeNews.onBackPressed : NOT-OBFUSCATED
-v3, Lorg/benews/BeNews;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
-v0
-v1, 2131165252
-v0, v1, Landroid/support/v4/app/FragmentManager;->findFragmentById(I)Landroid/support/v4/app/Fragment;
-v0
-v0, +00dh
-v3, Lorg/benews/BeNews;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
-v0
-v1, "DETAILS"
-v2, 1
-v0, v1, v2, Landroid/support/v4/app/FragmentManager;->popBackStack(Ljava/lang/String; I)V
-
-v3, Landroid/support/v4/app/FragmentActivity;->onBackPressed()V
--4h
-
-// BeNews.onClick : NOT-OBFUSCATED
-v3, 0
-v0, v6
-v0, Landroid/widget/Button;
-Lorg/benews/BackgroundSocket;->self()Lorg/benews/BackgroundSocket;
-v2
-v0, v3, Landroid/widget/Button;->setEnabled(Z)V
-v2, v3, Lorg/benews/BackgroundSocket;->setRun(Z)V
+// MainActivity.<clinit> : NOT-OBFUSCATED
+v0, Lcom/ryan/nativecall/MainActivity$Companion;
 v1, 0
-v3, Ljava/lang/Thread;
-v4, Lorg/benews/BeNews$3;
-v4, v5, v2, Lorg/benews/BeNews$3;-><init>(Lorg/benews/BeNews; Lorg/benews/BackgroundSocket;)V
-v3, v4, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-v3, Ljava/lang/Thread;->start()V
+v0, v1, Lcom/ryan/nativecall/MainActivity$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+v0, Lcom/ryan/nativecall/MainActivity;->Companion Lcom/ryan/nativecall/MainActivity$Companion;
+v0, 8
+v0, Lcom/ryan/nativecall/MainActivity;->$stable I
 
-// BeNews.onConfigurationChanged : NOT-OBFUSCATED
-v1, v2, Landroid/support/v4/app/FragmentActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-v0, v1, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v0, +007h
-v0, v1, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v0, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
+v0, "native-lib"
+v0, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-// BeNews.onCreate : NOT-OBFUSCATED
-v3, v4, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
-v1, 2130903064
-v3, v1, Lorg/benews/BeNews;->setContentView(I)V
-v3, Lorg/benews/BeNews;->getResources()Landroid/content/res/Resources;
-v1
-v1, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-v1
-v1, v1, Landroid/util/DisplayMetrics;->density F
-v1, Lorg/benews/BitmapHelper;->init(F)V
-v3, Lorg/benews/BeNews;->getApplicationContext()Landroid/content/Context;
-v1
-v1, Lorg/benews/BeNews;->context Landroid/content/Context;
-v0, Landroid/content/Intent;
-v1, Lorg/benews/BeNews;->context Landroid/content/Context;
-v2, Lorg/benews/PullIntentService;
-v0, v1, v2, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
-v1, Lorg/benews/BeNews;->context Landroid/content/Context;
-v1, v0, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+// MainActivity.<init> : NOT-OBFUSCATED
+v0, Landroidx/activity/ComponentActivity;-><init>()V
 
-// BeNews.onCreateOptionsMenu : NOT-OBFUSCATED
-v2, Lorg/benews/BeNews;->getMenuInflater()Landroid/view/MenuInflater;
+// MainActivity.onCreate$lambda$0 : NOT-OBFUSCATED
+v3, Lcom/ryan/nativecall/MainActivity;->getUrlFromNative()Ljava/lang/String;
 v0
-v1, 2131492864
-v0, v1, v3, Landroid/view/MenuInflater;->inflate(I Landroid/view/Menu;)V
-v0, 1
-v0
-
-// BeNews.onItemPress : NOT-OBFUSCATED
-v6, v9, Lorg/benews/BeNews;->listAdapter Landroid/widget/ArrayAdapter;
-v6, v10, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
-v4
-v4, Ljava/lang/Object;->toString()Ljava/lang/String;
-v3
-v6, Ljava/lang/StringBuilder;
-v6, Ljava/lang/StringBuilder;-><init>()V
-v7, "You selected: "
-v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v6
-v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v6
-v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v6
-v7, 0
-v9, v6, v7, Landroid/widget/Toast;->makeText(Landroid/content/Context; Ljava/lang/CharSequence; I)Landroid/widget/Toast;
-v6
-v6, Landroid/widget/Toast;->show()V
-Lorg/benews/BackgroundSocket;->self()Lorg/benews/BackgroundSocket;
-v5
-v5, +01eh
-v4, Ljava/util/HashMap;
-v4, Lorg/benews/DetailFragView;->newInstance(Ljava/util/HashMap;)Lorg/benews/DetailFragView;
-v0
-v9, Lorg/benews/BeNews;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
-v6
-v6, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
-v2
-v6, 2131165249
-v2, v6, v0, Landroid/support/v4/app/FragmentTransaction;->replace(I Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
-v6, "DETAILS"
-v2, v6, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
-v2, Landroid/support/v4/app/FragmentTransaction;->commit()I
-
-v1
-v6, "BeNews"
-v7, Ljava/lang/StringBuilder;
-v7, Ljava/lang/StringBuilder;-><init>()V
-v8, "Exception:"
-v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v7
-v7, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v7
-v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v7
-v6, v7, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--1ah
-
-// BeNews.onNewsUpdate : NOT-OBFUSCATED
-v2
-v1, 1
-v2, v1, Lorg/benews/BeNews;->setToUpdate(Z)V
-v1, 2131165250
-v2, v1, Lorg/benews/BeNews;->findViewById(I)Landroid/view/View;
-v0
-v0, Landroid/widget/Button;
-v1, Lorg/benews/BeNews$1;
-v1, v2, v0, Lorg/benews/BeNews$1;-><init>(Lorg/benews/BeNews; Landroid/widget/Button;)V
-v2, v1, Lorg/benews/BeNews;->runOnUiThread(Ljava/lang/Runnable;)V
-v2
-
-v1
-v2
-v1
-
-// BeNews.onOptionsItemSelected : NOT-OBFUSCATED
-v3, Landroid/view/MenuItem;->getItemId()I
-v0
-v1, 2131165261
-v0, v1, +004h
-v1, 1
-v1
-v2, v3, Landroid/support/v4/app/FragmentActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
-v1
--5h
-
-// BeNews.onPause : NOT-OBFUSCATED
-v2, Landroid/support/v4/app/FragmentActivity;->onPause()V
-v2, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
-v0
-v1, v2, Lorg/benews/BeNews;->mMessageReceiver Landroid/content/BroadcastReceiver;
-v0, v1, Landroid/support/v4/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-v2, Landroid/support/v4/app/FragmentActivity;->onPause()V
-
-// BeNews.onResume : NOT-OBFUSCATED
-v5, Landroid/support/v4/app/FragmentActivity;->onResume()V
-v5, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
-v0
-v1, v5, Lorg/benews/BeNews;->mMessageReceiver Landroid/content/BroadcastReceiver;
-v2, Landroid/content/IntentFilter;
-v3, Landroid/content/IntentFilter;
-v4, "upAndRunning"
-v3, v4, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-v2, v3, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
-v0, v1, v2, Landroid/support/v4/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)V
-
-// BeNews.onStart : NOT-OBFUSCATED
-v1, Landroid/support/v4/app/FragmentActivity;->onStart()V
-Lorg/benews/BackgroundSocket;->self()Lorg/benews/BackgroundSocket;
-v0
-v0, Lorg/benews/BackgroundSocket;->isThreadStarted()Z
-v0
-v0, +005h
-v1, Lorg/benews/BeNews;->finishOnStart()V
-
-// BeNews.onStop : NOT-OBFUSCATED
-v0, Landroid/support/v4/app/FragmentActivity;->onStop()V
-
-// BeNews.setProgressBar : NOT-OBFUSCATED
-v0, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
-v0, +007h
-v0, Lorg/benews/BeNews;->pb Landroid/widget/ProgressBar;
-v0, v2, Landroid/widget/ProgressBar;->setProgress(I)V
-
-// BeNews.setToUpdate : NOT-OBFUSCATED
-v1
-v2, v1, Lorg/benews/BeNews;->toUpdate Z
-v1
-
-v0
-v1
-v0
-
-// BeNewsFragList.<init> : NOT-OBFUSCATED
-v0, Landroid/support/v4/app/Fragment;-><init>()V
-
-// BeNewsFragList.onActivityCreated : NOT-OBFUSCATED
-v0, v1, Landroid/support/v4/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
-
-// BeNewsFragList.onAttach : NOT-OBFUSCATED
-v5, v6, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
-v0, v6
-v0, Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;
+v1, v3, Lcom/ryan/nativecall/MainActivity;->binding Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v1, +008h
+v1, "binding"
+v1, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+v1, 0
+v1, v1, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->textViewUrl Landroid/widget/TextView;
 v2, v0
-v2, v5, Lorg/benews/BeNewsFragList;->mListener Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;
+v2, Ljava/lang/CharSequence;
+v1, v2, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+// MainActivity.onCreate : NOT-OBFUSCATED
+v3, v4, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
+v3, Lcom/ryan/nativecall/MainActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+v0
+v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater;)Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v0
+v0, v3, Lcom/ryan/nativecall/MainActivity;->binding Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v0, v3, Lcom/ryan/nativecall/MainActivity;->binding Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v1, 0
+v2, "binding"
+v0, +006h
+v2, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+v0, v1
+v0, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->getRoot()Landroid/widget/LinearLayout;
+v0
+v0, Landroid/view/View;
+v3, v0, Lcom/ryan/nativecall/MainActivity;->setContentView(Landroid/view/View;)V
+v0, v3, Lcom/ryan/nativecall/MainActivity;->binding Lcom/ryan/nativecall/databinding/ActivityMainBinding;
+v0, +006h
+v2, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
++2h
+v1, v0
+v0, v1, Lcom/ryan/nativecall/databinding/ActivityMainBinding;->buttonFetchUrl Landroid/widget/Button;
+v1, Lcom/ryan/nativecall/MainActivity$$ExternalSyntheticLambda0;
+v1, v3, Lcom/ryan/nativecall/MainActivity$$ExternalSyntheticLambda0;-><init>(Lcom/ryan/nativecall/MainActivity;)V
+v0, v1, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+// JdkConstants.<init> : NOT-OBFUSCATED
+v2, Ljava/lang/Object;-><init>()V
+v0, Ljava/lang/AssertionError;
+v1, "JdkConstants should not be instantiated"
+v0, v1, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+v0
+
+// PrintFormatPattern.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
+
+// ApiStatus.<init> : NOT-OBFUSCATED
+v2, Ljava/lang/Object;-><init>()V
+v0, Ljava/lang/AssertionError;
+v1, "ApiStatus should not be instantiated"
+v0, v1, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+v0
+
+// Async.<init> : NOT-OBFUSCATED
+v2, Ljava/lang/Object;-><init>()V
+v0, Ljava/lang/AssertionError;
+v1, "Async should not be instantiated"
+v0, v1, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+v0
+
+// Debug.<init> : NOT-OBFUSCATED
+v2, Ljava/lang/Object;-><init>()V
+v0, Ljava/lang/AssertionError;
+v1, "Debug should not be instantiated"
+v0, v1, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+v0
+
+// Nls$Capitalization.<clinit> : NOT-OBFUSCATED
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;
+v1, "NotSpecified"
+v2, 0
+v0, v1, v2, Lorg/jetbrains/annotations/Nls$Capitalization;-><init>(Ljava/lang/String; I)V
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->NotSpecified Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;
+v1, "Title"
+v2, 1
+v0, v1, v2, Lorg/jetbrains/annotations/Nls$Capitalization;-><init>(Ljava/lang/String; I)V
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->Title Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;
+v1, "Sentence"
+v2, 2
+v0, v1, v2, Lorg/jetbrains/annotations/Nls$Capitalization;-><init>(Ljava/lang/String; I)V
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->Sentence Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->NotSpecified Lorg/jetbrains/annotations/Nls$Capitalization;
+v1, Lorg/jetbrains/annotations/Nls$Capitalization;->Title Lorg/jetbrains/annotations/Nls$Capitalization;
+v2, Lorg/jetbrains/annotations/Nls$Capitalization;->Sentence Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, v1, v2, [Lorg/jetbrains/annotations/Nls$Capitalization;
+v0
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->$VALUES [Lorg/jetbrains/annotations/Nls$Capitalization;
+
+// Nls$Capitalization.<init> : NOT-OBFUSCATED
+v0, v1, v2, Ljava/lang/Enum;-><init>(Ljava/lang/String; I)V
+
+// Nls$Capitalization.valueOf : NOT-OBFUSCATED
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, v1, Ljava/lang/Enum;->valueOf(Ljava/lang/Class; Ljava/lang/String;)Ljava/lang/Enum;
+v0
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;
+v0
+
+// Nls$Capitalization.values : NOT-OBFUSCATED
+v0, Lorg/jetbrains/annotations/Nls$Capitalization;->$VALUES [Lorg/jetbrains/annotations/Nls$Capitalization;
+v0, [Lorg/jetbrains/annotations/Nls$Capitalization;->clone()Ljava/lang/Object;
+v0
+v0, [Lorg/jetbrains/annotations/Nls$Capitalization;
+v0
+
+// ArtificialStackFrames.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
+
+// ArtificialStackFrames.coroutineBoundary : NOT-OBFUSCATED
+v0, Ljava/lang/Exception;
+v0, Ljava/lang/Exception;-><init>()V
+v0, Ljava/lang/Throwable;
+v1, L_COROUTINE/_BOUNDARY;
+v1, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 v1
-v2, Ljava/lang/ClassCastException;
+v0, v1, L_COROUTINE/CoroutineDebuggingKt;->access$artificialFrame(Ljava/lang/Throwable; Ljava/lang/String;)Ljava/lang/StackTraceElement;
+v0
+v0
+
+// ArtificialStackFrames.coroutineCreation : NOT-OBFUSCATED
+v0, Ljava/lang/Exception;
+v0, Ljava/lang/Exception;-><init>()V
+v0, Ljava/lang/Throwable;
+v1, L_COROUTINE/_CREATION;
+v1, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+v1
+v0, v1, L_COROUTINE/CoroutineDebuggingKt;->access$artificialFrame(Ljava/lang/Throwable; Ljava/lang/String;)Ljava/lang/StackTraceElement;
+v0
+v0
+
+// CoroutineDebuggingKt.<clinit> : NOT-OBFUSCATED
+v0, "_COROUTINE"
+v0, L_COROUTINE/CoroutineDebuggingKt;->ARTIFICIAL_FRAME_PACKAGE_NAME Ljava/lang/String;
+
+// CoroutineDebuggingKt.access$artificialFrame : NOT-OBFUSCATED
+v1, v2, L_COROUTINE/CoroutineDebuggingKt;->artificialFrame(Ljava/lang/Throwable; Ljava/lang/String;)Ljava/lang/StackTraceElement;
+v0
+v0
+
+// CoroutineDebuggingKt.artificialFrame : NOT-OBFUSCATED
+v7, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+v0
+v1, 0
+v0, v0, v1
+v1, 0
+v2, Ljava/lang/StackTraceElement;
 v3, Ljava/lang/StringBuilder;
 v3, Ljava/lang/StringBuilder;-><init>()V
-v6, Ljava/lang/Object;->toString()Ljava/lang/String;
-v4
+v4, L_COROUTINE/CoroutineDebuggingKt;->ARTIFICIAL_FRAME_PACKAGE_NAME Ljava/lang/String;
 v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 v3
-v4, " must implement OnFragmentInteractionListener"
-v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+v4, 46
+v3, v4, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+v3
+v3, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 v3
 v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 v3
-v2, v3, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
-v2
-
-// BeNewsFragList.onCreate : NOT-OBFUSCATED
-v0, v1, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
-
-// BeNewsFragList.onCreateView : NOT-OBFUSCATED
-v1, 2130903067
-v2, 0
-v4, v1, v5, v2, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
-v0
-v1, 16908298
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v1
-v1, Landroid/widget/AbsListView;
-v1, v3, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v1, v3, Lorg/benews/BeNewsFragList;->mAdapter Landroid/widget/ListAdapter;
-v1, +018h
-v1, v3, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v1, Landroid/widget/AbsListView;->getAdapter()Landroid/widget/Adapter;
-v1
-v2, v3, Lorg/benews/BeNewsFragList;->mAdapter Landroid/widget/ListAdapter;
-v1, v2, +00eh
-v1, v3, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v2, v3, Lorg/benews/BeNewsFragList;->mAdapter Landroid/widget/ListAdapter;
-v1, v2, Landroid/widget/AdapterView;->setAdapter(Landroid/widget/Adapter;)V
-v1, v3, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v1, v3, Landroid/widget/AbsListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-v0
-
-// BeNewsFragList.onDetach : NOT-OBFUSCATED
-v1, Landroid/support/v4/app/Fragment;->onDetach()V
-v0, 0
-v0, v1, Lorg/benews/BeNewsFragList;->mListener Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;
-
-// BeNewsFragList.onItemClick : NOT-OBFUSCATED
-v0, v1, Lorg/benews/BeNewsFragList;->mListener Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;
-v0, +007h
-v0, v1, Lorg/benews/BeNewsFragList;->mListener Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;
-v0, v4, Lorg/benews/BeNewsFragList$OnFragmentInteractionListener;->onItemPress(I)V
-
-// BeNewsFragList.setEmptyText : NOT-OBFUSCATED
-v1, v2, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v1, Landroid/widget/AbsListView;->getEmptyView()Landroid/view/View;
-v0
-v1, v3, Landroid/widget/TextView;
-v1, +007h
-v0, Landroid/widget/TextView;
-v0, v3, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-// BeNewsFragList.setListAdapter : NOT-OBFUSCATED
-v3, v2, Lorg/benews/BeNewsFragList;->mAdapter Landroid/widget/ListAdapter;
-v3, +012h
-v0, v2, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v0, +00eh
-v0, v2, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v1, v2, Lorg/benews/BeNewsFragList;->mAdapter Landroid/widget/ListAdapter;
-v0, v1, Landroid/widget/AdapterView;->setAdapter(Landroid/widget/Adapter;)V
-v0, v2, Lorg/benews/BeNewsFragList;->mListView Landroid/widget/AbsListView;
-v0, v2, Landroid/widget/AbsListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-// DetailFragView.<init> : NOT-OBFUSCATED
-v1, Landroid/support/v4/app/Fragment;-><init>()V
-v0, 0
-v0, v1, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v0, 0
-v0, v1, Lorg/benews/DetailFragView;->layoutId I
-
-// DetailFragView.newInstance : NOT-OBFUSCATED
-v0, Landroid/os/Bundle;
-v0, Landroid/os/Bundle;-><init>()V
-v7, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-v5
-v5, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-v2
-v2, Ljava/util/Iterator;->hasNext()Z
-v5
-v5, +016h
-v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
-v3
-v3, Ljava/lang/String;
-v7, v3, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-v5
-v5, Ljava/lang/String;
-v5, Ljava/lang/String;->toCharArray()[C
-v5
-v0, v3, v5, Landroid/os/Bundle;->putCharArray(Ljava/lang/String; [C)V
--19h
-v5, "type"
-v7, v5, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+v0, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
 v4
-v4, Ljava/lang/String;
-v1, 0
-v4, +017h
-v5, "img"
-v4, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+v0, Ljava/lang/StackTraceElement;->getLineNumber()I
 v5
-v5, +015h
-v1, Lorg/benews/DetailFragViewImage;
-v1, Lorg/benews/DetailFragViewImage;-><init>()V
-v5, "layoutId"
-v6, 2130903065
-v0, v5, v6, Landroid/os/Bundle;->putInt(Ljava/lang/String; I)V
-v1, +005h
-v1, v0, Lorg/benews/DetailFragView;->setArguments(Landroid/os/Bundle;)V
-v1
-v1, Lorg/benews/DetailFragView;
-v1, Lorg/benews/DetailFragView;-><init>()V
--bh
-
-// DetailFragView.onActivityCreated : NOT-OBFUSCATED
-v0, v1, Landroid/support/v4/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
-
-// DetailFragView.onAttach : NOT-OBFUSCATED
-v0, v1, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
-
-// DetailFragView.onCreateView : NOT-OBFUSCATED
-v2, v5, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v0, +0b6h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "path"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "path"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_path Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "type"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "type"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_type Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "date"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "date"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_date Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "title"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "title"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_title Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "headline"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "headline"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_headline Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "content"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, +012h
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "content"
-v0, v1, Landroid/os/Bundle;->getCharArray(Ljava/lang/String;)[C
-v0
-v0, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-v0
-v0, v2, Lorg/benews/DetailFragView;->item_content Ljava/lang/String;
-v2, Lorg/benews/DetailFragView;->getArguments()Landroid/os/Bundle;
-v0
-v1, "layoutId"
-v0, v1, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-v0
-v0, v2, Lorg/benews/DetailFragView;->layoutId I
-v0, v2, Lorg/benews/DetailFragView;->layoutId I
-v1, 0
-v3, v0, v4, v1, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v1, 2131165257
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->media Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v1, 2131165227
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->title Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v1, 2131165255
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->headline Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v1, 2131165259
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->content Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v1, 2131165254
-v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
-v0
-v0, v2, Lorg/benews/DetailFragView;->date Landroid/view/View;
-v0, v2, Lorg/benews/DetailFragView;->view Landroid/view/View;
-v0
-
-// DetailFragView.onDetach : NOT-OBFUSCATED
-v0, Landroid/support/v4/app/Fragment;->onDetach()V
-
-// DetailFragViewImage.<init> : NOT-OBFUSCATED
-v1, Lorg/benews/DetailFragView;-><init>()V
-v0, "DetailFragViewImage"
-v0, v1, Lorg/benews/DetailFragViewImage;->TAG Ljava/lang/String;
-
-// DetailFragViewImage.onActivityCreated : NOT-OBFUSCATED
-v10, 1128792064
-v13, v14, Lorg/benews/DetailFragView;->onActivityCreated(Landroid/os/Bundle;)V
-v11, v13, Lorg/benews/DetailFragViewImage;->item_path Ljava/lang/String;
-v11, +0adh
-v11, v13, Lorg/benews/DetailFragViewImage;->item_type Ljava/lang/String;
-v11, +0a9h
-v11, v13, Lorg/benews/DetailFragViewImage;->item_type Ljava/lang/String;
-v12, "img"
-v11, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-v11
-v11, +046h
-v6, Ljava/io/File;
-v11, v13, Lorg/benews/DetailFragViewImage;->item_path Ljava/lang/String;
-v6, v11, Ljava/io/File;-><init>(Ljava/lang/String;)V
-v6, Ljava/io/File;->exists()Z
-v11
-v11, +039h
-v6, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-v11
-v11, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
-v9
-v9, +02fh
-v5, v13, Lorg/benews/DetailFragViewImage;->media Landroid/view/View;
-v5, Landroid/widget/ImageView;
-v11, Lorg/benews/BitmapHelper;->img_view_limit_high I
-v11, +081h
-v7, 1142292480
-v11, 1114636288
-v12, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v8, v11, v12
-v9, Landroid/graphics/Bitmap;->getHeight()I
-v4
-v11, v4
-v11, v11, v7
-v11, +007h
-v11, v4
-v11, v11, v8
-v11, +00eh
-v11, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v12, 0
-v11, v11, v12
-v11, +068h
-v10, v10
-v9, v10, Lorg/benews/BitmapHelper;->scaleToFitHeight(Landroid/graphics/Bitmap; I)Landroid/graphics/Bitmap;
-v9
-v5, v9, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-v10, v13, Lorg/benews/DetailFragViewImage;->item_title Ljava/lang/String;
-v10, +00fh
-v10, v13, Lorg/benews/DetailFragViewImage;->title Landroid/view/View;
-v10, +00bh
-v10, v13, Lorg/benews/DetailFragViewImage;->title Landroid/view/View;
-v10, Landroid/widget/TextView;
-v11, v13, Lorg/benews/DetailFragViewImage;->item_title Ljava/lang/String;
-v10, v11, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v10, v13, Lorg/benews/DetailFragViewImage;->item_headline Ljava/lang/String;
-v10, +00fh
-v10, v13, Lorg/benews/DetailFragViewImage;->headline Landroid/view/View;
-v10, +00bh
-v10, v13, Lorg/benews/DetailFragViewImage;->headline Landroid/view/View;
-v10, Landroid/widget/TextView;
-v11, v13, Lorg/benews/DetailFragViewImage;->item_headline Ljava/lang/String;
-v10, v11, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v10, v13, Lorg/benews/DetailFragViewImage;->item_content Ljava/lang/String;
-v10, +00fh
-v10, v13, Lorg/benews/DetailFragViewImage;->content Landroid/view/View;
-v10, +00bh
-v10, v13, Lorg/benews/DetailFragViewImage;->content Landroid/view/View;
-v10, Landroid/widget/TextView;
-v11, v13, Lorg/benews/DetailFragViewImage;->item_content Ljava/lang/String;
-v10, v11, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-v10, v13, Lorg/benews/DetailFragViewImage;->item_date Ljava/lang/String;
-v10, +024h
-v10, v13, Lorg/benews/DetailFragViewImage;->date Landroid/view/View;
-v10, +020h
-v0, Ljava/util/Date;
-v0, Ljava/util/Date;-><init>()V
-v10, v13, Lorg/benews/DetailFragViewImage;->item_date Ljava/lang/String;
-v10, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+v6, "_"
+v2, v3, v6, v4, v5, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; I)V
 v2
-v10, 1000
-v10, v2
-v0, v10, v11, Ljava/util/Date;->setTime(J)V
-v10, v13, Lorg/benews/DetailFragViewImage;->date Landroid/view/View;
-v10, Landroid/widget/TextView;
-v11, Lorg/benews/BeNewsArrayAdapter;->dateFormatter Ljava/text/SimpleDateFormat;
-v11, v0, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-v11
-v10, v11, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-v11, Lorg/benews/BitmapHelper;->img_view_limit_high I
-v7, v11
--80h
-v11, Lorg/benews/BitmapHelper;->dp2dpi_factor F
-v10, v11
--69h
-v1
-v10, "DetailFragViewImage"
-v11, Ljava/lang/StringBuilder;
-v11, Ljava/lang/StringBuilder;-><init>()V
-v12, " (onActivityCreated):"
-v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v11
-v11, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-v11
-v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v11
-v10, v11, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
--7bh
-v1
-v10, "DetailFragViewImage"
-v11, Ljava/lang/StringBuilder;
-v11, Ljava/lang/StringBuilder;-><init>()V
-v12, "Invalid date "
-v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v11
-v12, v13, Lorg/benews/DetailFragViewImage;->item_date Ljava/lang/String;
-v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-v11
-v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-v11
-v10, v11, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
-v10, v13, Lorg/benews/DetailFragViewImage;->date Landroid/view/View;
-v10, Landroid/widget/TextView;
-v11, "--/--/----"
-v10, v11, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
--47h
+// CoroutineDebuggingKt.getARTIFICIAL_FRAME_PACKAGE_NAME : NOT-OBFUSCATED
+v0, L_COROUTINE/CoroutineDebuggingKt;->ARTIFICIAL_FRAME_PACKAGE_NAME Ljava/lang/String;
+v0
+
+// _BOUNDARY.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
+
+// _CREATION.<init> : NOT-OBFUSCATED
+v0, Ljava/lang/Object;-><init>()V
 
