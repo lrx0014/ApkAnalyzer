@@ -20,7 +20,7 @@
 pip install -r requirements.txt
 
 # 2. run the script to start your analysis
-python rating_analyzer.py ./test_malicious_sample.apk -o result.yaml
+python rating_analyzer.py ./malware_apks/test_malicious_sample.apk -o result.yaml
 
 # 3. more usage examples:
 python rating_analyzer.py -h

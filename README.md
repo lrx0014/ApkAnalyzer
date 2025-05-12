@@ -7,8 +7,14 @@
 > It is a **REAL** piece of malware, so absolutely **DO NOT** install it on your real device! 
 
 ## How to Use
+### Source Code for V2 (current branch)
+[malware_analyzer.py](malware_analyzer.py)
+
+### Source Code for V1 (previous assignment)
+https://github.com/lrx0014/ApkAnalyzer/tree/v1
+
 ### Quick Start
-- See Colab notebook: https://colab.research.google.com/drive/1SDxx3n3FZ6rqCgr_raEBA9lyhvRBGJIx
+- See Colab notebook: https://colab.research.google.com/drive/1CgMfLPtBts-KJ6K1fQ7YsicB_r5edZW0
 
 ### Local run: Step-by-Step
 ```shell
@@ -18,10 +24,10 @@
 pip install -r requirements.txt
 
 # 2-a. run the script to start your analysis and output the results
-python malware_analyzer.py ./malware_analyzer/test_malicious_sample.apk
+python malware_analyzer.py ./malware_apks/test_malicious_sample.apk
 
 # 2-b. or save the results to a file
-python malware_analyzer.py ./malware_analyzer/test_malicious_sample.apk > result_malware_analysis.txt
+python malware_analyzer.py ./malware_apks/test_malicious_sample.apk > result_malware_analysis.txt
 
 # 3. more usage examples:
 python malware_analyzer.py -h
