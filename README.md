@@ -40,4 +40,4 @@ Usage: python malware_analyzer.py <path_to_apk_file> [-l WARNING] [-h]
 ```
 
 example output:
-- a [result_malware_analysis.txt](result_malware_analysis.txt) file specified by -o (optional)
+- a [result_malware_analysis.txt](result_malware_analysis.txt) file 
